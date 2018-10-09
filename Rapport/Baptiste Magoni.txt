@@ -1,0 +1,5 @@
+09/10/2018 :
+	- Création de notre GIT 
+	- Brainstorming sur charte graphique de l'application
+	- Installation du driver arduino
+	- Installation des paquets pythons 
