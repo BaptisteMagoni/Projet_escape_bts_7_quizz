@@ -37,5 +37,5 @@ void MainWindow::CheckButton(){
     QStringList listContent = textCurrent.split(":");
     QString comPort = listContent.at(0);
     QString nameDevice = listContent.at(1);
-    cout << sizeof(comPort);
+
 }
