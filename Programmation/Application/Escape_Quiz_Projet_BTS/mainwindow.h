@@ -20,6 +20,7 @@ public:
 private:
     void setComPort();
     void setObject();
+    bool openPort(QString portName, QSerialPort::BaudRate actualBaudRate);
 
 private:
     Ui::MainWindow *ui;
