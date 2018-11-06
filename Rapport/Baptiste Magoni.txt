@@ -9,6 +9,5 @@
 
 06/11/2018 :
 	- Changement de language, nous passons à la méthode la plus simple en c++ car l'installation des modules Python sont assez complexe.
-	- Rensiegnement sur la librairie QSerialPort (pour lire le port com)
-	- Fonctionnement et implémentation pour lire le port com
-	- Bouton Valider en cours de développement
+	- Renseignement sur la librairie QSerialPort (pour lire le port com)
+	- Mise en place de l'alogirthme permettant la connexion au port com de l'arduino
