@@ -31,4 +31,7 @@ HEADERS += \
         mainwindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    windowchoice.ui \
+    windowconfig.ui \
+    windowquestion.ui
