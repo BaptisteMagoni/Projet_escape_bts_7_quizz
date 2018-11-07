@@ -11,3 +11,8 @@
 	- Changement de language, nous passons à la méthode la plus simple en c++ car l'installation des modules Python sont assez complexe.
 	- Renseignement sur la librairie QSerialPort (pour lire le port com)
 	- Mise en place de l'alogirthme permettant la connexion au port com de l'arduino
+
+07/11/18 : 
+	- Finition de la connexion à la carte arduino via l'application
+	- Commencement à lire les données envoyé par l'application sur l'arduino
+	- Problème : Pas assez de connaissance sur arduino pour arriver à lire le port série
