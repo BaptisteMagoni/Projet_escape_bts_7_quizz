@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <iostream>
+
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +23,7 @@ public:
 private:
     void setComPort();
     void setObject();
-    bool openPort(QString portName, QSerialPort::BaudRate actualBaudRate);
+    void openPort(QString portName, QSerialPort::BaudRate actualBaudRate);
 
 private:
     Ui::MainWindow *ui;
@@ -28,6 +31,8 @@ private:
 
 private slots:
     void CheckButton();
+    void sendData(const char *data);
+    char readData();
 };
 
 #endif // MAINWINDOW_H
