@@ -50,7 +50,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(459, 550);
+        MainWindow->resize(484, 613);
         ApplicationGlobale = new QWidget(MainWindow);
         ApplicationGlobale->setObjectName(QStringLiteral("ApplicationGlobale"));
         verticalLayout_2 = new QVBoxLayout(ApplicationGlobale);
