@@ -219,6 +219,47 @@ release/moc_mainwindow.cpp: C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtW
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportglobal.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/QSerialPortInfo \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportinfo.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QApplication \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qapplication.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qeventloop.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qguiapplication.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QWidget \
 		mainwindow.h
 	"C:\Program Files (x86)\5.5\mingw492_32\bin\moc.exe" $(DEFINES) -D__GNUC__ -DWIN32 -I"C:/Program Files (x86)/5.5/mingw492_32/mkspecs/win32-g++" -I"C:/Users/Baptiste Magoni/Desktop/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS" -I"C:/Program Files (x86)/5.5/mingw492_32/include" -I"C:/Program Files (x86)/5.5/mingw492_32/include/QtWidgets" -I"C:/Program Files (x86)/5.5/mingw492_32/include/QtGui" -I"C:/Program Files (x86)/5.5/mingw492_32/include/QtANGLE" -I"C:/Program Files (x86)/5.5/mingw492_32/include/QtSerialPort" -I"C:/Program Files (x86)/5.5/mingw492_32/include/QtCore" mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -362,13 +403,47 @@ release/main.o: main.cpp mainwindow.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportglobal.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/QSerialPortInfo \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportinfo.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/QVariant \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QAction \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qaction.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QApplication \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qapplication.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qeventloop.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qguiapplication.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qinputmethod.h
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qinputmethod.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -482,7 +557,6 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportglobal.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/QSerialPortInfo \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtSerialPort/qserialportinfo.h \
-		ui_mainwindow.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QAction \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qaction.h \
@@ -496,8 +570,18 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtGui/qinputmethod.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QComboBox \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHeaderView \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
@@ -508,26 +592,17 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qstyle.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHBoxLayout \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayout.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QHeaderView \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QLabel \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlabel.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QPushButton \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QVBoxLayout \
-		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QWidget
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QWidget \
+		ui_mainwindow.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o mainwindow.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 
