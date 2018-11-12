@@ -25,13 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    windowchoice.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    windowchoice.h
 
 FORMS += \
         mainwindow.ui \
     windowchoice.ui \
-    windowconfig.ui \
     windowquestion.ui
