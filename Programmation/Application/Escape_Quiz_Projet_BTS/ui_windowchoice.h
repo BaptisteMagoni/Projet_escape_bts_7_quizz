@@ -48,16 +48,29 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         pushButton_musicale = new QPushButton(widget_2);
         pushButton_musicale->setObjectName(QStringLiteral("pushButton_musicale"));
-        pushButton_musicale->setMinimumSize(QSize(0, 23));
+        pushButton_musicale->setEnabled(true);
+        pushButton_musicale->setMinimumSize(QSize(0, 170));
+        pushButton_musicale->setSizeIncrement(QSize(1000, 1000));
+        pushButton_musicale->setBaseSize(QSize(1000, 10000));
         QPalette palette;
         QBrush brush(QColor(0, 170, 0, 255));
         brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush);
         palette.setBrush(QPalette::Active, QPalette::Highlight, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
         palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
         QBrush brush1(QColor(51, 153, 255, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Disabled, QPalette::Highlight, brush1);
         pushButton_musicale->setPalette(palette);
+        pushButton_musicale->setStyleSheet(QStringLiteral("background-color: rgb(0, 170, 0)"));
 
         horizontalLayout_2->addWidget(pushButton_musicale);
 
@@ -70,7 +83,8 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         pushButton_informatique = new QPushButton(widget_3);
         pushButton_informatique->setObjectName(QStringLiteral("pushButton_informatique"));
-        pushButton_informatique->setMinimumSize(QSize(0, 23));
+        pushButton_informatique->setMinimumSize(QSize(0, 170));
+        pushButton_informatique->setStyleSheet(QStringLiteral("background-color: rgb(255, 0, 0)"));
 
         horizontalLayout_3->addWidget(pushButton_informatique);
 
@@ -83,6 +97,9 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         pushButton_mixte = new QPushButton(widget);
         pushButton_mixte->setObjectName(QStringLiteral("pushButton_mixte"));
+        pushButton_mixte->setEnabled(false);
+        pushButton_mixte->setMinimumSize(QSize(0, 170));
+        pushButton_mixte->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 0)"));
 
         horizontalLayout->addWidget(pushButton_mixte);
 
