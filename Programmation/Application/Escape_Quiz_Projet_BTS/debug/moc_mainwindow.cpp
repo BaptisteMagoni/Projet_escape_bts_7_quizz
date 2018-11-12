@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[7];
-    char stringdata0[59];
+    QByteArrayData data[6];
+    char stringdata0[47];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,13 +33,12 @@ QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 11), // "CheckButton"
 QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 8), // "sendData"
-QT_MOC_LITERAL(4, 33, 11), // "const char*"
-QT_MOC_LITERAL(5, 45, 4), // "data"
-QT_MOC_LITERAL(6, 50, 8) // "readData"
+QT_MOC_LITERAL(4, 33, 4), // "data"
+QT_MOC_LITERAL(5, 38, 8) // "readData"
 
     },
-    "MainWindow\0CheckButton\0\0sendData\0"
-    "const char*\0data\0readData"
+    "MainWindow\0CheckButton\0\0sendData\0data\0"
+    "readData"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,12 +58,12 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags
        1,    0,   29,    2, 0x08 /* Private */,
        3,    1,   30,    2, 0x08 /* Private */,
-       6,    0,   33,    2, 0x08 /* Private */,
+       5,    0,   33,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 4,    5,
-    QMetaType::Char,
+    QMetaType::Void, QMetaType::QByteArray,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -76,9 +75,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->CheckButton(); break;
-        case 1: _t->sendData((*reinterpret_cast< const char*(*)>(_a[1]))); break;
-        case 2: { char _r = _t->readData();
-            if (_a[0]) *reinterpret_cast< char*>(_a[0]) = _r; }  break;
+        case 1: _t->sendData((*reinterpret_cast< const QByteArray(*)>(_a[1]))); break;
+        case 2: _t->readData(); break;
         default: ;
         }
     }
