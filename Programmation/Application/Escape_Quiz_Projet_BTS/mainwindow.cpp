@@ -1,10 +1,10 @@
 #include "mainwindow.h"
-#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include <iostream>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <QWidget>
 
 using namespace std;
 
@@ -25,7 +25,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::setComPort(){
     foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-        ui->comboBox_com->addItem(info.portName() + " : " + info.description());
+        if(info.portName().compare("COM1") != 0)
+            ui->comboBox_com->addItem(info.portName() + " : " + info.description());
 }
 
 void MainWindow::setObject(){
@@ -41,7 +42,8 @@ void MainWindow::CheckButton(){
     foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
         if(info.portName().compare(comPort) == 0)
             openPort(comPort, QSerialPort::Baud9600);
-    sendData("ALLUME");
+    sendData("1");
+    //connect(m_serial, SIGNAL(readyRead()), this, SLOT(readData()));
 }
 
 void MainWindow::openPort(QString portName, QSerialPort::BaudRate actualBaudRate)
@@ -54,19 +56,37 @@ void MainWindow::openPort(QString portName, QSerialPort::BaudRate actualBaudRate
         m_serial->setParity(QSerialPort::NoParity);
         m_serial->setStopBits(QSerialPort::OneStop);
         m_serial->setFlowControl(QSerialPort::NoFlowControl);
-        m_serial->open(QIODevice::ReadWrite);
+        bool check = m_serial->open(QIODevice::ReadWrite);
         cout << "Conexion" << endl;
+        if(!check) close_item_config();
+
     }else{
         cout << "Error code : " << m_serial->error() << endl;
         cout << "Error string : " << m_serial->errorString().toStdString() << endl;
     }
 }
 
-void MainWindow::sendData(const char * data){
+void MainWindow::sendData(const QByteArray &data){
     m_serial->write(data);
-    cout << "Envoi : " << data << endl;
+    cout << "Envoi : " << data.toStdString() << endl;
 }
 
-char MainWindow::readData(){
+void MainWindow::readData(){
+    sendData("a");
+}
+
+void MainWindow::close_item_config(){
+    ui->button_start->close();
+    ui->comboBox_com->close();
+    ui->label_bienvenue->close();
+}
+
+void MainWindow::show_item_config(){
+    ui->button_start->show();
+    ui->comboBox_com->show();
+    ui->label_bienvenue->show();
+}
+
+void MainWindow::init_item_choice(){
 
 }
