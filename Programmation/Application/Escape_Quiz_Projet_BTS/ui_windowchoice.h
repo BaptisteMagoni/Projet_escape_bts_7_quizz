@@ -16,7 +16,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -26,18 +25,15 @@ class Ui_Form
 {
 public:
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton_3;
-    QSpacerItem *horizontalSpacer_2;
+    QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_3;
-    QPushButton *pushButton;
-    QSpacerItem *horizontalSpacer_4;
+    QPushButton *pushButton_musicale;
+    QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer_5;
-    QPushButton *pushButton_2;
-    QSpacerItem *horizontalSpacer_6;
+    QPushButton *pushButton_informatique;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton_mixte;
 
     void setupUi(QWidget *Form)
     {
@@ -46,59 +42,52 @@ public:
         Form->resize(484, 602);
         verticalLayout = new QVBoxLayout(Form);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        pushButton_3 = new QPushButton(Form);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-
-        horizontalLayout->addWidget(pushButton_3);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_2);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
+        widget_2 = new QWidget(Form);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        horizontalLayout_2 = new QHBoxLayout(widget_2);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        pushButton_musicale = new QPushButton(widget_2);
+        pushButton_musicale->setObjectName(QStringLiteral("pushButton_musicale"));
+        pushButton_musicale->setMinimumSize(QSize(0, 23));
+        QPalette palette;
+        QBrush brush(QColor(0, 170, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Highlight, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush);
+        QBrush brush1(QColor(51, 153, 255, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::Highlight, brush1);
+        pushButton_musicale->setPalette(palette);
 
-        horizontalLayout_2->addItem(horizontalSpacer_3);
-
-        pushButton = new QPushButton(Form);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-
-        horizontalLayout_2->addWidget(pushButton);
-
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_4);
+        horizontalLayout_2->addWidget(pushButton_musicale);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout->addWidget(widget_2);
 
-        horizontalLayout_3 = new QHBoxLayout();
+        widget_3 = new QWidget(Form);
+        widget_3->setObjectName(QStringLiteral("widget_3"));
+        horizontalLayout_3 = new QHBoxLayout(widget_3);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        pushButton_informatique = new QPushButton(widget_3);
+        pushButton_informatique->setObjectName(QStringLiteral("pushButton_informatique"));
+        pushButton_informatique->setMinimumSize(QSize(0, 23));
 
-        horizontalLayout_3->addItem(horizontalSpacer_5);
-
-        pushButton_2 = new QPushButton(Form);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-
-        horizontalLayout_3->addWidget(pushButton_2);
-
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_6);
+        horizontalLayout_3->addWidget(pushButton_informatique);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout->addWidget(widget_3);
+
+        widget = new QWidget(Form);
+        widget->setObjectName(QStringLiteral("widget"));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        pushButton_mixte = new QPushButton(widget);
+        pushButton_mixte->setObjectName(QStringLiteral("pushButton_mixte"));
+
+        horizontalLayout->addWidget(pushButton_mixte);
+
+
+        verticalLayout->addWidget(widget);
 
 
         retranslateUi(Form);
@@ -109,9 +98,9 @@ public:
     void retranslateUi(QWidget *Form)
     {
         Form->setWindowTitle(QApplication::translate("Form", "Form", 0));
-        pushButton_3->setText(QApplication::translate("Form", "QUIZZ MUSICAL", 0));
-        pushButton->setText(QApplication::translate("Form", "QUIZZ INFORMATIQUE", 0));
-        pushButton_2->setText(QApplication::translate("Form", "ALEATOIRE", 0));
+        pushButton_musicale->setText(QApplication::translate("Form", "Quizz Musicale", 0));
+        pushButton_informatique->setText(QApplication::translate("Form", "Quizz Informatique", 0));
+        pushButton_mixte->setText(QApplication::translate("Form", "Quizz mixte", 0));
     } // retranslateUi
 
 };
