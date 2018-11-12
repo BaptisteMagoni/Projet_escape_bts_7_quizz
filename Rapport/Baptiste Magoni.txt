@@ -16,3 +16,8 @@
 	- Finition de la connexion à la carte arduino via l'application
 	- Commencement à lire les données envoyé par l'application sur l'arduino
 	- Problème : Pas assez de connaissance sur arduino pour arriver à lire le port série
+
+12/11/18:
+	- Amélioration de la connexion à la carte arduino
+	- Finition des envoie de données depuis l'application à la carte arduino
+	- Remplacer le QWidget de l'application principale par le QWidget des pages secondaires
