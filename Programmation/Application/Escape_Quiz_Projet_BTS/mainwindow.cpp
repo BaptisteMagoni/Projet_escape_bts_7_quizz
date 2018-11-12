@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "windowchoice.h"
 #include <iostream>
 #include <QSerialPort>
 #include <QSerialPortInfo>
@@ -76,17 +76,15 @@ void MainWindow::readData(){
 }
 
 void MainWindow::close_item_config(){
-    ui->button_start->close();
-    ui->comboBox_com->close();
-    ui->label_bienvenue->close();
+    ui->ApplicationGlobale->close();
+    init_item_choice();
 }
 
 void MainWindow::show_item_config(){
-    ui->button_start->show();
-    ui->comboBox_com->show();
-    ui->label_bienvenue->show();
+    ui->ApplicationGlobale->show();
 }
 
 void MainWindow::init_item_choice(){
-
+    WindowChoice *choice = new WindowChoice(this, m_serial);
+    choice->show();
 }
