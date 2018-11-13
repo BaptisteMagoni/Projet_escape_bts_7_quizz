@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    m_parent = parent;
     ui->setupUi(this);
     setComPort();
     setObject();
