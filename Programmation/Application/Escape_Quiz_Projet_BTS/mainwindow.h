@@ -45,6 +45,7 @@ private:
 private:
     Ui::MainWindow *ui;
     QSerialPort *m_serial;
+    QWidget *m_parent;
 
 private slots:
     void CheckButton();
