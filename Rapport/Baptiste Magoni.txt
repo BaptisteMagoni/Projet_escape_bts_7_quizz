@@ -21,3 +21,7 @@
 	- Amélioration de la connexion à la carte arduino
 	- Finition des envoie de données depuis l'application à la carte arduino
 	- Remplacer le QWidget de l'application principale par le QWidget des pages secondaires
+
+13/11/18:
+	- Finition de relier toute les QWidgets entre eux
+	- Mise en couleur de quelque bouton
