@@ -4,9 +4,10 @@
 #include <QWidget>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <iostream>
 
 namespace Ui {
-    class Form;
+    class ApplicationMode;
 }
 
 
@@ -15,13 +16,20 @@ class WindowChoice : public QWidget
     Q_OBJECT
 
 public:
-    WindowChoice(QWidget *parent, QSerialPort *m_serial);
+    WindowChoice(QWidget *parent, QSerialPort *serial);
     ~WindowChoice();
 
 private:
-    Ui::Form *wc;
+    Ui::ApplicationMode *wc;
+    QSerialPort *m_serial;
+    QWidget *m_parent;
+
 private:
-    void read_sequence();
+    void init_widget_question();
+    void link_widget_question();
+
+private slots:
+    void event_button_choice();
 };
 
 #endif // WINDOWCHOICE_H
