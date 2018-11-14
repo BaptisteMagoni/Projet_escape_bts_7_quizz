@@ -35,5 +35,4 @@ void WindowChoice::link_widget_question(){
 void WindowChoice::event_button_choice(){
     this->close();
     link_widget_question();
-    cout << "Caca" << endl;
 }
