@@ -58,7 +58,7 @@ void MainWindow::openPort(QString portName, QSerialPort::BaudRate actualBaudRate
         m_serial->setStopBits(QSerialPort::OneStop);
         m_serial->setFlowControl(QSerialPort::NoFlowControl);
         bool check = m_serial->open(QIODevice::ReadWrite);
-        cout << "Conexion" << endl;
+        cout << "Conexion ok !" << endl;
         if(!check) close_item_config();
 
     }else{
