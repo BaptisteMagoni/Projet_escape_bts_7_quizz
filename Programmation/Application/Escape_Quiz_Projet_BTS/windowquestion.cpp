@@ -15,7 +15,6 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial) :
 {
     wq->setupUi(this);
     m_serial = serial;
-    cout << "Salussss" << endl;
 
 }
 
