@@ -26,7 +26,7 @@ private:
 
 private:
     void init_widget_question();
-    void link_widget_question();
+    void link_widget_question(QString type_question);
 
 private slots:
     void event_button_choice();
