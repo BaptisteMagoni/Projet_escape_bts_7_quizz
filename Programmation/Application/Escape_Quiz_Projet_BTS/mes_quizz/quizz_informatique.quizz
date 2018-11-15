@@ -3,11 +3,21 @@ Question :Comment s'appelle le créateur de linux
 Answer 1:Linus Torvalds
 Answer 2:Donald Trump 
 Answer 3 :Ahmed Sylla
+answer: 1
 QuestionEnd
 
 QuestionStart_2
-Question :Comment s'appelle le créateur de cette application
-Answer 1:Baptiste Magoni
-Answer 2:Ta mere la tchoin
-Answer 3 :Vald
+Question :Quelle est parmis c'est trois réponse le language de programmation
+Answer 1: HTML
+Answer 2: Java
+Answer 3 : CSS
+answer: 2
+QuestionEnd
+
+QuestionStart_3
+Question :Lila
+Answer 1: lol
+Answer 2: lala
+Answer 3 : lili
+answer: 3
 QuestionEnd
