@@ -146,7 +146,7 @@ public:
     void retranslateUi(QWidget *ApplicationMode)
     {
         ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", 0));
-        pushButton_musicale->setText(QApplication::translate("ApplicationMode", "Quizz Musicale", 0));
+        pushButton_musicale->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
         pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
         pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz mixte", 0));
     } // retranslateUi
