@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -30,6 +31,7 @@ class Ui_MainWindow
 public:
     QWidget *ApplicationGlobale;
     QVBoxLayout *verticalLayout_2;
+    QCheckBox *check_demo;
     QWidget *ZoneLabel;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *espaceGauche_3;
@@ -50,13 +52,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(484, 580);
+        MainWindow->resize(484, 621);
         ApplicationGlobale = new QWidget(MainWindow);
         ApplicationGlobale->setObjectName(QStringLiteral("ApplicationGlobale"));
         verticalLayout_2 = new QVBoxLayout(ApplicationGlobale);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        check_demo = new QCheckBox(ApplicationGlobale);
+        check_demo->setObjectName(QStringLiteral("check_demo"));
+
+        verticalLayout_2->addWidget(check_demo);
+
         ZoneLabel = new QWidget(ApplicationGlobale);
         ZoneLabel->setObjectName(QStringLiteral("ZoneLabel"));
         horizontalLayout = new QHBoxLayout(ZoneLabel);
@@ -134,6 +141,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        check_demo->setText(QApplication::translate("MainWindow", "D\303\251mo", 0));
         label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", 0));
         button_start->setText(QApplication::translate("MainWindow", "Valider", 0));
     } // retranslateUi
