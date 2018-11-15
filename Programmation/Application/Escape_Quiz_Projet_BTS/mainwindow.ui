@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>484</width>
-    <height>580</height>
+    <height>621</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,13 @@
   </property>
   <widget class="QWidget" name="ApplicationGlobale">
    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QCheckBox" name="check_demo">
+      <property name="text">
+       <string>Démo</string>
+      </property>
+     </widget>
+    </item>
     <item>
      <widget class="QWidget" name="ZoneLabel" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
