@@ -5,6 +5,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <windowchoice.h>
+#include <windowend.h>
 #include <iostream>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -12,6 +13,7 @@
 #include <QStringList>
 #include <QTextStream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -20,13 +22,14 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     wq(new Ui::ApplicationQuestion)
 {
     wq->setupUi(this);
+    m_parent = parent;
     question_number = 1;
     m_serial = serial;
     m_type_question = type_button;
     cout << m_type_question.toStdString() << endl;
+    init_button_event();
     open_file();
-    //read_question();
-    display_question();
+    change_page();
     read_one_question();
 }
 
@@ -36,7 +39,6 @@ WindowQuestion::~WindowQuestion()
 }
 
 void WindowQuestion::open_file(){
-    int etape = 1;
     QString nom_fichier = "mes_quizz/quizz_" + m_type_question + ".quizz";
     if(nom_fichier.isEmpty()) return;
 
@@ -51,29 +53,71 @@ void WindowQuestion::open_file(){
             ligne = flux.readLine();
 
             if(!ligne.startsWith("#"))
-                question.push_back(ligne);
+                m_question.push_back(ligne);
         }
     }
 }
 
-void WindowQuestion::display_question(){
-    cout << question.size() << endl;
-    for(int i=0;i<question.size();i++)
-        cout << question.at(i).toStdString() << endl;
-}
-
 void WindowQuestion::read_one_question(){
-    for(int i=0;i<question.size();i++){
-        if(question.at(i).compare("QuestionStart_1") == 0){
-            QStringList question_list = question.at(i+1).split(":");
-            QStringList answer1 = question.at(i+2).split(":");
-            QStringList answer2 = question.at(i+3).split(":");
-            QStringList answer3 = question.at(i+4).split(":");
-            wq->label_question->setText(question_list.at(1));
+    for(unsigned int i=0;i<m_question.size();i++){
+        if(m_question.at(i).compare("QuestionStart_"+int_to_str(question_number)) == 0){
+            QStringList question_list = m_question.at(i+1).split(":");
+            QStringList answer1 = m_question.at(i+2).split(":");
+            QStringList answer2 = m_question.at(i+3).split(":");
+            QStringList answer3 = m_question.at(i+4).split(":");
+            QStringList good_answer = m_question.at(i+5).split(":");
+            answer = good_answer.at(1);
+            answer = answer.replace(" ", "");
+            wq->label_question->setText("Question " + QString::number(question_number) + " : " + question_list.at(1));
             wq->pushButton_answer1->setText(answer1.at(1));
             wq->pushButton_answer2->setText(answer2.at(1));
             wq->pushButton_answer3->setText(answer3.at(1));
         }
     }
+    change_page();
 }
 
+QString WindowQuestion::int_to_str(int num){
+    return QString::number(num);
+}
+
+void WindowQuestion::change_page(){
+    wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
+    if(question_number == get_nb_question()+1){
+        this->close();
+        WindowEnd *end = new WindowEnd(m_parent, m_serial, answer_player);
+        end->show();
+    }
+}
+
+int WindowQuestion::get_nb_question(){
+    int nb = 0;
+    for(unsigned int i=0;i<m_question.size();i++)
+        if(m_question.at(i).startsWith("QuestionStart"))
+            nb++;
+    return nb;
+}
+
+void WindowQuestion::event_button(){
+    QPushButton *btnSender = qobject_cast<QPushButton*>(sender());
+    QString clickedBtnName = btnSender->objectName();
+    QStringList list_name = clickedBtnName.split("_");
+    QString answerplayer = list_name.at(1);
+    check_answer(answerplayer);
+}
+
+void WindowQuestion::check_answer(QString answerplayer){
+    answerplayer = answerplayer.replace("answer", "");
+    if(answerplayer.compare(answer) == 0)
+        answer_player.push_back(true);
+    else
+        answer_player.push_back(false);
+    question_number = question_number + 1;
+    read_one_question();
+}
+
+void WindowQuestion::init_button_event(){
+    connect(wq->pushButton_answer1, SIGNAL (released()), this, SLOT(event_button()));
+    connect(wq->pushButton_answer2, SIGNAL (released()), this, SLOT(event_button()));
+    connect(wq->pushButton_answer3, SIGNAL (released()), this, SLOT(event_button()));
+}
