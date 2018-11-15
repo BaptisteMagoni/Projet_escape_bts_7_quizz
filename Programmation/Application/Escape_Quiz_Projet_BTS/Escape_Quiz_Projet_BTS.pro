@@ -27,14 +27,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     windowchoice.cpp \
-    windowquestion.cpp
+    windowquestion.cpp \
+    windowend.cpp
 
 HEADERS += \
         mainwindow.h \
     windowchoice.h \
-    windowquestion.h
+    windowquestion.h \
+    windowend.h
 
 FORMS += \
         mainwindow.ui \
     windowchoice.ui \
-    windowquestion.ui
+    windowquestion.ui \
+    windowend.ui
+
+DISTFILES += \
+    windowend.qmodel
