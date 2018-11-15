@@ -30,7 +30,7 @@ public:
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QLabel *label;
+    QLabel *label_question;
     QSpacerItem *horizontalSpacer_2;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
@@ -52,7 +52,7 @@ public:
     {
         if (ApplicationQuestion->objectName().isEmpty())
             ApplicationQuestion->setObjectName(QStringLiteral("ApplicationQuestion"));
-        ApplicationQuestion->resize(479, 467);
+        ApplicationQuestion->resize(479, 545);
         verticalLayout = new QVBoxLayout(ApplicationQuestion);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         widget = new QWidget(ApplicationQuestion);
@@ -63,10 +63,10 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        label = new QLabel(widget);
-        label->setObjectName(QStringLiteral("label"));
+        label_question = new QLabel(widget);
+        label_question->setObjectName(QStringLiteral("label_question"));
 
-        horizontalLayout->addWidget(label);
+        horizontalLayout->addWidget(label_question);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -147,7 +147,7 @@ public:
     void retranslateUi(QWidget *ApplicationQuestion)
     {
         ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", 0));
-        label->setText(QApplication::translate("ApplicationQuestion", "Question", 0));
+        label_question->setText(QApplication::translate("ApplicationQuestion", "Question", 0));
         pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
         pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
         pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
