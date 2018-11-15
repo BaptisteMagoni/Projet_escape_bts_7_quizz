@@ -52,7 +52,7 @@ public:
     {
         if (ApplicationQuestion->objectName().isEmpty())
             ApplicationQuestion->setObjectName(QStringLiteral("ApplicationQuestion"));
-        ApplicationQuestion->resize(479, 467);
+        ApplicationQuestion->resize(479, 545);
         verticalLayout = new QVBoxLayout(ApplicationQuestion);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         widget = new QWidget(ApplicationQuestion);
