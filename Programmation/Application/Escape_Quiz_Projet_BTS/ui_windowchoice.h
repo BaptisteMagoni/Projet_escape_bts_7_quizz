@@ -29,7 +29,7 @@ public:
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton_musicale;
+    QPushButton *pushButton_musical;
     QSpacerItem *horizontalSpacer;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
@@ -57,12 +57,12 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        pushButton_musicale = new QPushButton(widget_2);
-        pushButton_musicale->setObjectName(QStringLiteral("pushButton_musicale"));
-        pushButton_musicale->setEnabled(true);
-        pushButton_musicale->setMinimumSize(QSize(400, 170));
-        pushButton_musicale->setSizeIncrement(QSize(1000, 1000));
-        pushButton_musicale->setBaseSize(QSize(1000, 10000));
+        pushButton_musical = new QPushButton(widget_2);
+        pushButton_musical->setObjectName(QStringLiteral("pushButton_musical"));
+        pushButton_musical->setEnabled(true);
+        pushButton_musical->setMinimumSize(QSize(400, 170));
+        pushButton_musical->setSizeIncrement(QSize(1000, 1000));
+        pushButton_musical->setBaseSize(QSize(1000, 10000));
         QPalette palette;
         QBrush brush(QColor(0, 170, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -80,10 +80,10 @@ public:
         QBrush brush1(QColor(51, 153, 255, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Disabled, QPalette::Highlight, brush1);
-        pushButton_musicale->setPalette(palette);
-        pushButton_musicale->setStyleSheet(QStringLiteral("background-color: rgb(0, 170, 0)"));
+        pushButton_musical->setPalette(palette);
+        pushButton_musical->setStyleSheet(QStringLiteral("background-color: rgb(0, 170, 0)"));
 
-        horizontalLayout_2->addWidget(pushButton_musicale);
+        horizontalLayout_2->addWidget(pushButton_musical);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -146,7 +146,7 @@ public:
     void retranslateUi(QWidget *ApplicationMode)
     {
         ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", 0));
-        pushButton_musicale->setText(QApplication::translate("ApplicationMode", "Quizz Musicale", 0));
+        pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
         pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
         pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz mixte", 0));
     } // retranslateUi
