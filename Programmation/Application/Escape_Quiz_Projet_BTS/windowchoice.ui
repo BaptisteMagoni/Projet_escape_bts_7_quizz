@@ -31,7 +31,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_musicale">
+       <widget class="QPushButton" name="pushButton_musical">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -175,7 +175,7 @@
          <string notr="true">background-color: rgb(0, 170, 0)</string>
         </property>
         <property name="text">
-         <string>Quizz Musicale</string>
+         <string>Quizz Musical</string>
         </property>
        </widget>
       </item>
