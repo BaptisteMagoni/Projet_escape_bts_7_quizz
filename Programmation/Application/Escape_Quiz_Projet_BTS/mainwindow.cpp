@@ -14,7 +14,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     m_parent = parent;
     ui->setupUi(this);
-    ui->check_demo->setCheckable(true);
     setComPort();
     setObject();
 }
@@ -33,12 +32,6 @@ void MainWindow::setComPort(){
 
 void MainWindow::setObject(){
     connect(ui->button_start, SIGNAL (released()), this, SLOT(CheckButton()));
-    connect(ui->check_demo, SIGNAL (released()), this, SLOT(statecheckbox()));
-}
-
-void MainWindow::statecheckbox(){
-    ui->check_demo->setCheckable(ui->check_demo->checkState());
-    cout << "Etat demo : " << ui->check_demo->checkState() << endl;
 }
 
 void MainWindow::CheckButton(){
