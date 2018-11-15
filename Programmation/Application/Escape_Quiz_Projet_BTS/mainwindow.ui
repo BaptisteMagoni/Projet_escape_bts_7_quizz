@@ -16,13 +16,6 @@
   <widget class="QWidget" name="ApplicationGlobale">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QCheckBox" name="check_demo">
-      <property name="text">
-       <string>Démo</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QWidget" name="ZoneLabel" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
