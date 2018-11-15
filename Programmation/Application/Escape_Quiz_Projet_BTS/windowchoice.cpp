@@ -23,16 +23,19 @@ WindowChoice::~WindowChoice()
 }
 
 void WindowChoice::init_widget_question(){
-    connect(wc->pushButton_musicale, SIGNAL (released()), this, SLOT(event_button_choice()));
+    connect(wc->pushButton_musical, SIGNAL (released()), this, SLOT(event_button_choice()));
     connect(wc->pushButton_informatique, SIGNAL (released()), this, SLOT(event_button_choice()));
 }
 
-void WindowChoice::link_widget_question(){
-   WindowQuestion *question = new WindowQuestion(m_parent, m_serial);
-   question->show();
+void WindowChoice::link_widget_question(QString type_question){
+    WindowQuestion *question = new WindowQuestion(m_parent, m_serial, type_question);
+    question->show();
 }
 
 void WindowChoice::event_button_choice(){
     this->close();
-    link_widget_question();
+    QPushButton *btnSender = qobject_cast<QPushButton*>(sender());
+    QString clickedBtnName = btnSender->objectName();
+    QStringList list_name = clickedBtnName.split("_");
+    link_widget_question(list_name.at(1));
 }
