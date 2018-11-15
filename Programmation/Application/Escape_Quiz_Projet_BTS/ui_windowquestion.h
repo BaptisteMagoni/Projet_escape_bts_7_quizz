@@ -27,21 +27,28 @@ class Ui_ApplicationQuestion
 {
 public:
     QVBoxLayout *verticalLayout;
+    QWidget *widget_5;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *label_page;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label_question;
     QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *verticalSpacer;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_answer1;
     QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer_2;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *pushButton_answer2;
     QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *verticalSpacer_3;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_7;
@@ -52,9 +59,25 @@ public:
     {
         if (ApplicationQuestion->objectName().isEmpty())
             ApplicationQuestion->setObjectName(QStringLiteral("ApplicationQuestion"));
-        ApplicationQuestion->resize(479, 545);
+        ApplicationQuestion->resize(479, 558);
         verticalLayout = new QVBoxLayout(ApplicationQuestion);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        widget_5 = new QWidget(ApplicationQuestion);
+        widget_5->setObjectName(QStringLiteral("widget_5"));
+        horizontalLayout_5 = new QHBoxLayout(widget_5);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_9);
+
+        label_page = new QLabel(widget_5);
+        label_page->setObjectName(QStringLiteral("label_page"));
+
+        horizontalLayout_5->addWidget(label_page);
+
+
+        verticalLayout->addWidget(widget_5);
+
         widget = new QWidget(ApplicationQuestion);
         widget->setObjectName(QStringLiteral("widget"));
         horizontalLayout = new QHBoxLayout(widget);
@@ -65,6 +88,10 @@ public:
 
         label_question = new QLabel(widget);
         label_question->setObjectName(QStringLiteral("label_question"));
+        QFont font;
+        font.setFamily(QStringLiteral("Calibri"));
+        font.setPointSize(11);
+        label_question->setFont(font);
 
         horizontalLayout->addWidget(label_question);
 
@@ -74,6 +101,10 @@ public:
 
 
         verticalLayout->addWidget(widget);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
 
         widget_2 = new QWidget(ApplicationQuestion);
         widget_2->setObjectName(QStringLiteral("widget_2"));
@@ -96,6 +127,10 @@ public:
 
         verticalLayout->addWidget(widget_2);
 
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
+
         widget_3 = new QWidget(ApplicationQuestion);
         widget_3->setObjectName(QStringLiteral("widget_3"));
         horizontalLayout_3 = new QHBoxLayout(widget_3);
@@ -116,6 +151,10 @@ public:
 
 
         verticalLayout->addWidget(widget_3);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_3);
 
         widget_4 = new QWidget(ApplicationQuestion);
         widget_4->setObjectName(QStringLiteral("widget_4"));
@@ -147,6 +186,7 @@ public:
     void retranslateUi(QWidget *ApplicationQuestion)
     {
         ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", 0));
+        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", 0));
         label_question->setText(QApplication::translate("ApplicationQuestion", "Question", 0));
         pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
         pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
