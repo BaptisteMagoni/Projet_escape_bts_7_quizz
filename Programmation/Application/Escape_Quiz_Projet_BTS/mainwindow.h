@@ -51,6 +51,7 @@ private slots:
     void CheckButton();
     void sendData(const QByteArray &data);
     void readData();
+    void statecheckbox();
 };
 
 #endif // MAINWINDOW_H
