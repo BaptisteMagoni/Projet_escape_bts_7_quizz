@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -50,7 +50,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(484, 621);
+        MainWindow->resize(478, 621);
         ApplicationGlobale = new QWidget(MainWindow);
         ApplicationGlobale->setObjectName(QStringLiteral("ApplicationGlobale"));
         verticalLayout_2 = new QVBoxLayout(ApplicationGlobale);
@@ -133,9 +133,9 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", 0));
-        button_start->setText(QApplication::translate("MainWindow", "Valider", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", Q_NULLPTR));
+        button_start->setText(QApplication::translate("MainWindow", "Valider", Q_NULLPTR));
     } // retranslateUi
 
 };
