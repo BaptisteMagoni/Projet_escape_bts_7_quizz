@@ -10,6 +10,7 @@ void setup() {
 void loop() {
   if(Serial.available()){
     const int data = Serial.parseInt();
+    Serial.println("Receive");
     switch(data){
       case 1:  pinLed = 8;
       break;
@@ -22,6 +23,6 @@ void loop() {
   if(pinLed != -1){
     pinAfter = pinLed;
     digitalWrite(pinLed, HIGH);
-    digitalWrite(pinAfter, LOW);
+    //digitalWrite(pinAfter, LOW);
   }
 }
