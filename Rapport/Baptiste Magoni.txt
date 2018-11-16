@@ -30,3 +30,10 @@
 	- Mise en place de l'algorithme pour afficher la question avec c'est réponse
 	- Mise en place du système de score
 	- Mise en en place de la page de fin avec l'affichage du score et le boutton pour revenir sur la page avec les différent menu
+
+16/11/18:
+	- Continuation de l'algorithme du quizz
+	- Réajustement du programme arduino pour pouvoir allumer la led lors de la connexion série
+	- Modification du gitignore pour éviter de commit les .o et les .exe
+	- Modification du GANTT, le projet est rendu à 84 %
+	- Commencer à réflichir pour envoyer le message GAGNE:7
