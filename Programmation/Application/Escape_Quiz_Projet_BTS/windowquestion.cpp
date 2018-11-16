@@ -48,6 +48,7 @@ void WindowQuestion::open_file(){
         QMessageBox::information(this, "Impossible d'ouvrir le fichier.", file.errorString());
     else{
         QTextStream flux(&file);
+        flux.setCodec("UTF-8");
         QString ligne;
         while(!flux.atEnd()){
             ligne = flux.readLine();
@@ -68,13 +69,18 @@ void WindowQuestion::read_one_question(){
             QStringList good_answer = m_question.at(i+5).split(":");
             answer = good_answer.at(1);
             answer = answer.replace(" ", "");
-            wq->label_question->setText("Question " + QString::number(question_number) + " : " + question_list.at(1));
-            wq->pushButton_answer1->setText(answer1.at(1));
-            wq->pushButton_answer2->setText(answer2.at(1));
-            wq->pushButton_answer3->setText(answer3.at(1));
+            display_question(question_list.at(1), answer1.at(1), answer2.at(1), answer3.at(1));
         }
     }
     change_page();
+}
+
+void WindowQuestion::display_question(QString question, QString answer1, QString answer2, QString answer3){
+    wq->label_question_ligne2->close();
+    wq->label_question_ligne1->setText("Question " + QString::number(question_number) + " : " + question);
+    wq->pushButton_answer1->setText(answer1);
+    wq->pushButton_answer2->setText(answer2);
+    wq->pushButton_answer3->setText(answer3);
 }
 
 QString WindowQuestion::int_to_str(int num){
@@ -85,7 +91,7 @@ void WindowQuestion::change_page(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
-        WindowEnd *end = new WindowEnd(m_parent, m_serial, answer_player);
+        WindowEnd *end = new WindowEnd(m_parent, m_serial, answer_player, int_to_str(get_nb_question()));
         end->show();
     }
 }
