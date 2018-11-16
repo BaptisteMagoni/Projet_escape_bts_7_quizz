@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowquestion.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -32,10 +32,17 @@ public:
     QSpacerItem *horizontalSpacer_9;
     QLabel *label_page;
     QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
+    QWidget *widget_7;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_question;
     QSpacerItem *horizontalSpacer_2;
+    QLabel *label_question_ligne1;
+    QSpacerItem *horizontalSpacer;
+    QWidget *widget_6;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_10;
+    QLabel *label_question_ligne2;
+    QSpacerItem *horizontalSpacer_11;
     QSpacerItem *verticalSpacer;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
@@ -59,7 +66,7 @@ public:
     {
         if (ApplicationQuestion->objectName().isEmpty())
             ApplicationQuestion->setObjectName(QStringLiteral("ApplicationQuestion"));
-        ApplicationQuestion->resize(479, 558);
+        ApplicationQuestion->resize(478, 558);
         verticalLayout = new QVBoxLayout(ApplicationQuestion);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         widget_5 = new QWidget(ApplicationQuestion);
@@ -80,24 +87,49 @@ public:
 
         widget = new QWidget(ApplicationQuestion);
         widget->setObjectName(QStringLiteral("widget"));
-        horizontalLayout = new QHBoxLayout(widget);
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        widget_7 = new QWidget(widget);
+        widget_7->setObjectName(QStringLiteral("widget_7"));
+        widget_7->setMinimumSize(QSize(0, 0));
+        horizontalLayout = new QHBoxLayout(widget_7);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+        label_question_ligne1 = new QLabel(widget_7);
+        label_question_ligne1->setObjectName(QStringLiteral("label_question_ligne1"));
+
+        horizontalLayout->addWidget(label_question_ligne1);
+
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        label_question = new QLabel(widget);
-        label_question->setObjectName(QStringLiteral("label_question"));
-        QFont font;
-        font.setFamily(QStringLiteral("Calibri"));
-        font.setPointSize(11);
-        label_question->setFont(font);
 
-        horizontalLayout->addWidget(label_question);
+        verticalLayout_2->addWidget(widget_7);
 
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        widget_6 = new QWidget(widget);
+        widget_6->setObjectName(QStringLiteral("widget_6"));
+        widget_6->setMinimumSize(QSize(0, 0));
+        horizontalLayout_6 = new QHBoxLayout(widget_6);
+        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        horizontalLayout_6->addItem(horizontalSpacer_10);
+
+        label_question_ligne2 = new QLabel(widget_6);
+        label_question_ligne2->setObjectName(QStringLiteral("label_question_ligne2"));
+
+        horizontalLayout_6->addWidget(label_question_ligne2);
+
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_11);
+
+
+        verticalLayout_2->addWidget(widget_6);
 
 
         verticalLayout->addWidget(widget);
@@ -185,12 +217,13 @@ public:
 
     void retranslateUi(QWidget *ApplicationQuestion)
     {
-        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", 0));
-        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", 0));
-        label_question->setText(QApplication::translate("ApplicationQuestion", "Question", 0));
-        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
-        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
-        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
+        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", Q_NULLPTR));
+        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", Q_NULLPTR));
+        label_question_ligne1->setText(QApplication::translate("ApplicationQuestion", "Question_ligne1", Q_NULLPTR));
+        label_question_ligne2->setText(QApplication::translate("ApplicationQuestion", "Question_ligne2", Q_NULLPTR));
+        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
     } // retranslateUi
 
 };
