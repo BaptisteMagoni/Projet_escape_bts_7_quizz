@@ -1,5 +1,5 @@
 QuestionStart_1
-Question :Comment s'appelle le créateur de linux
+Question :Comment s'appelle le créateur de linux ?
 Answer 1:Linus Torvalds
 Answer 2:Donald Trump 
 Answer 3 :Ahmed Sylla
@@ -7,7 +7,7 @@ answer: 1
 QuestionEnd
 
 QuestionStart_2
-Question :Quelle est parmis c'est trois réponse le language de programmation
+Question :Quelle est parmis c'est trois réponse le language de programmation ?
 Answer 1: HTML
 Answer 2: Java
 Answer 3 : CSS
@@ -15,7 +15,7 @@ answer: 2
 QuestionEnd
 
 QuestionStart_3
-Question :Lila
+Question :Lila ...
 Answer 1: lol
 Answer 2: lala
 Answer 3 : lili

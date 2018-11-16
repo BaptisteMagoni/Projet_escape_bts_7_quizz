@@ -1,5 +1,4 @@
 int pinLed = -1;
-int pinAfter;
 
 void setup() {
   Serial.begin(9600);
@@ -21,8 +20,10 @@ void loop() {
     }
   }
   if(pinLed != -1){
-    pinAfter = pinLed;
     digitalWrite(pinLed, HIGH);
+<<<<<<< HEAD
     //digitalWrite(pinAfter, LOW);
+=======
+>>>>>>> 3142a5b2185948667f4f30e54e85c1d62fe73c8b
   }
 }
