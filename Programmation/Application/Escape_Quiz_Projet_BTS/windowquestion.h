@@ -40,6 +40,7 @@ private:
     void change_page();
     void init_button_event();
     void check_answer(QString answerplayer);
+    void display_question(QString question, QString answer1, QString answer2, QString answer3);
     int get_nb_question();
     QString int_to_str(int num);
 
