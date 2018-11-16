@@ -14,6 +14,7 @@
 #include <QTextStream>
 #include <string>
 #include <sstream>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -24,9 +25,9 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     wq->setupUi(this);
     m_parent = parent;
     question_number = 1;
+    error = 0;
     m_serial = serial;
     m_type_question = type_button;
-    cout << m_type_question.toStdString() << endl;
     init_button_event();
     open_file();
     change_page();
@@ -114,12 +115,34 @@ void WindowQuestion::event_button(){
 
 void WindowQuestion::check_answer(QString answerplayer){
     answerplayer = answerplayer.replace("answer", "");
-    if(answerplayer.compare(answer) == 0)
+    if(answerplayer.compare(answer) == 0){
         answer_player.push_back(true);
-    else
+    }else{
         answer_player.push_back(false);
-    question_number = question_number + 1;
+        m_error.push_back(error++);
+    }
+    if(m_error.size() == 3) {
+        reset();
+        change_page();
+        display_message_error();
+        read_one_question();
+    }else
+        question_number = question_number + 1;
     read_one_question();
+}
+
+void WindowQuestion::display_message_error(){
+    msg_box.setText(m_message_error);
+    msg_box.setObjectName(QStringLiteral("Information"));
+    msg_box.exec();
+}
+
+void WindowQuestion::reset(){
+    error = 0;
+    question_number = 1;
+    answer_player.clear();
+    m_error.clear();
+    m_message_error = "Vous vous êtes trompé 3 fois. Vous recommencer du début !";
 }
 
 void WindowQuestion::init_button_event(){

@@ -8,6 +8,7 @@
 #include <vector>
 #include <iostream>
 #include <QString>
+#include <QMessageBox>
 
 namespace Ui{
     class ApplicationQuestion;
@@ -27,11 +28,15 @@ private:
     QSerialPort *m_serial;
     QString m_type_question;
     QString answer;
+    QString m_message_error;
+    QWidget *m_parent;
+    QMessageBox msg_box;
     std::vector<QString> m_question;
     std::vector<QString> sequence_question;
+    std::vector<int> m_error;
     std::vector<bool> answer_player;
     int question_number;
-    QWidget *m_parent;
+    int error;
 
 
 private:
@@ -41,6 +46,8 @@ private:
     void init_button_event();
     void check_answer(QString answerplayer);
     void display_question(QString question, QString answer1, QString answer2, QString answer3);
+    void reset();
+    void display_message_error();
     int get_nb_question();
     QString int_to_str(int num);
 

@@ -1,23 +1,39 @@
 QuestionStart_1
-Question :Comment s'appelle le créateur de linux ?
-Answer 1:Linus Torvalds
-Answer 2:Donald Trump 
-Answer 3 :Ahmed Sylla
-answer: 1
+Question :Comment s'appelle le créateur de linux?
+Answer 1:Donald Trump
+Answer 2:Linus Torvalds
+Answer 3:Bill Gates
+answer: 2
 QuestionEnd
 
 QuestionStart_2
-Question :Quelle est parmis c'est trois réponse le language de programmation ?
-Answer 1: HTML
-Answer 2: Java
-Answer 3 : CSS
+Question :Quelle est parmis c'est trois réponses, le language de programmation?
+Answer 1:CSS
+Answer 2:Java
+Answer 3:HTML
 answer: 2
 QuestionEnd
 
 QuestionStart_3
-Question :Lila ...
-Answer 1: lol
-Answer 2: lala
-Answer 3 : lili
+Question :Linux est ..
+Answer 1:un noyau de GNU ?
+Answer 2:un noyau appartenant à apple?
+Answer 3:un système d'exploitation ?
+answer: 1
+QuestionEnd
+
+QuestionStart_4
+Question :Qu'est ce qu'un OS ?
+Answer 1:Un système d'exploitation
+Answer 2:Une distribution linux
+Answer 3:Une distribution Windows
+answer: 1
+QuestionEnd
+
+QuestionStart_5
+Question :Parmi les propositions suivante lesquels n'est pas un système d'exploitation?
+Answer 1:GNU
+Answer 2:Windows
+Answer 3:Linux
 answer: 3
 QuestionEnd

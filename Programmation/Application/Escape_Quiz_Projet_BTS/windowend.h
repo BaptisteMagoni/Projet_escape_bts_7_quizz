@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QSerialPort>
 #include <iostream>
+#include <QSerialPort>
+#include <QMessageBox>
 
 namespace Ui {
     class ApplicationEnd;
@@ -22,9 +24,19 @@ private:
     Ui::ApplicationEnd *we;
     std::vector<bool> m_score;
     QString m_number_all;
+    QWidget *m_parent;
+    QSerialPort *m_serial;
+    QMessageBox m_message_box;
 
 private:
     int count_score();
+    void show_windowchoice();
+    void init_button();
+    void display_message_box();
+    void send_socket();
+
+private slots:
+    void event_button();
 };
 
 #endif // WINDOWEND_H

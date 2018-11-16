@@ -44,7 +44,7 @@ void MainWindow::CheckButton(){
         if(info.portName().compare(comPort) == 0)
             openPort(comPort, QSerialPort::Baud9600);
     sendData("1");
-    connect(m_serial, SIGNAL(readyRead()), this, SLOT(readData()));
+    //connect(m_serial, SIGNAL(readyRead()), this, SLOT(readData()));
     //close_item_config();
 }
 
