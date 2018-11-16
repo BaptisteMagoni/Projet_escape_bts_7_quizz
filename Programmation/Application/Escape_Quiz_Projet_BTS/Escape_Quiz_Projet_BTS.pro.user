@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.3.1, 2018-11-16T11:40:22. -->
+<!-- Written by QtCreator 4.3.1, 2018-11-16T11:50:33. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{77252017-2e1f-4013-9bee-9f4f710a99ff}</value>
-=======
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.3.1, 2018-11-16T10:47:25. -->
-=======
-<!-- Written by QtCreator 4.3.1, 2018-11-16T10:50:46. -->
->>>>>>> 1c65064cce1ab9d4808ddd7b644f854ee151ae9c
-<qtcreator>
- <data>
-  <variable>EnvironmentId</variable>
-  <value type="QByteArray">{c4b17bc1-a1d8-4442-baa2-479f92c5d5e9}</value>
->>>>>>> 3142a5b2185948667f4f30e54e85c1d62fe73c8b
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -78,11 +66,7 @@
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">H:/SN2/angibaud/projet_escape_game/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/matthieu.guittet/Desktop/Projet_escape_bts_7_quizz-master/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS</value>
->>>>>>> 3142a5b2185948667f4f30e54e85c1d62fe73c8b
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -193,19 +177,14 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Escape_Quiz_Projet_BTS</value>
-<<<<<<< HEAD
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:H:/SN2/angibaud/projet_escape_game/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS/Escape_Quiz_Projet_BTS.pro</value>
-=======
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Escape_Quiz_Projet_BTS2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/matthieu.guittet/Desktop/Projet_escape_bts_7_quizz-master/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS/Escape_Quiz_Projet_BTS.pro</value>
->>>>>>> 3142a5b2185948667f4f30e54e85c1d62fe73c8b
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Escape_Quiz_Projet_BTS.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
-    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">H:/SN2/angibaud/projet_escape_game/Projet_escape_bts_7_quizz/Programmation/Application/Escape_Quiz_Projet_BTS</value>
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
