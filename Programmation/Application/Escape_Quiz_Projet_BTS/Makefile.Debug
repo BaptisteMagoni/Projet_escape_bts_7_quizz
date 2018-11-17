@@ -99,7 +99,7 @@ $(DESTDIR_TARGET): ui_mainwindow.h ui_windowchoice.h ui_windowquestion.h ui_wind
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile.Debug Escape_Quiz_Projet_BTS.pro
+	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile.Debug Escape_Quiz_Projet_BTS.pro
 
 qmake_all: FORCE
 

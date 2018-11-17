@@ -1,19 +1,19 @@
 QuestionStart_1
-Question : De quelle film est issue cette musique ?
-Answer 1 : Star Trek
-Answer 2 : Star Wars 
-Answer 3 : BattleStar Galactica
-answer: 2
-send_data :1
-QuestionEnd
-
-QuestionStart_2
 Question : De quelle Mario provient la musique ?
 Answer 1 : Mario 64
 Answer 2 : Mario Galaxy
 Answer 3 : Mario bros 3
 answer: 3
 send_data :2
+QuestionEnd
+
+QuestionStart_2
+Question : De quelle film est issue cette musique ?
+Answer 1 : Star Trek
+Answer 2 : Star Wars 
+Answer 3 : BattleStar Galactica
+answer: 2
+send_data :1
 QuestionEnd
 
 QuestionStart_3

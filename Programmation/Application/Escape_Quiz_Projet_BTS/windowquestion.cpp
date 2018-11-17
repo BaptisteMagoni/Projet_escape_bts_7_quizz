@@ -95,8 +95,8 @@ void WindowQuestion::set_state_button(bool state){
 }
 
 void WindowQuestion::read_data(){
-    cout << "Message reçu : " << m_serial->readAll().toStdString() << endl;
-    if(m_serial->readAll() == "Finish")
+    QByteArray dddddd = m_serial->readAll();
+    if(dddddd == "Finish")
         set_state_button(true);
     else
         set_state_button(false);

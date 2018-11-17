@@ -12,11 +12,11 @@ MAKEFILE      = Makefile.Release
 CC            = gcc
 CXX           = g++
 DEFINES       = -DUNICODE -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SERIALPORT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
-CFLAGS        = -pipe -fno-keep-inline-dllexport -Wall -Wextra $(DEFINES)
-CXXFLAGS      = -pipe -fno-keep-inline-dllexport -frtti -Wall -Wextra -fexceptions -mthreads $(DEFINES)
+CFLAGS        = -pipe -fno-keep-inline-dllexport -O2 -Wall -Wextra $(DEFINES)
+CXXFLAGS      = -pipe -fno-keep-inline-dllexport -O2 -frtti -Wall -Wextra -fexceptions -mthreads $(DEFINES)
 INCPATH       = -I. -I"C:\Program Files (x86)\5.5\mingw492_32\include" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtWidgets" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtGui" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtANGLE" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtSerialPort" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtNetwork" -I"C:\Program Files (x86)\5.5\mingw492_32\include\QtCore" -Irelease -I. -I"C:\Program Files (x86)\5.5\mingw492_32\mkspecs\win32-g++" 
 LINKER      =        g++
-LFLAGS        =        -Wl,-subsystem,windows -mthreads
+LFLAGS        =        -Wl,-s -Wl,-subsystem,windows -mthreads
 LIBS        =        -lmingw32 "-LC:/Program Files (x86)/5.5/mingw492_32/lib" -lqtmain -lshell32 -lQt5Widgets -lQt5Gui -lQt5SerialPort -lQt5Network -lQt5Core 
 QMAKE         = "C:\Program Files (x86)\5.5\mingw492_32\bin\qmake.exe"
 IDC           = idc
@@ -99,7 +99,7 @@ $(DESTDIR_TARGET): ui_mainwindow.h ui_windowchoice.h ui_windowquestion.h ui_wind
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
 
 qmake: FORCE
-	@$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile.Release Escape_Quiz_Projet_BTS.pro
+	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile.Release Escape_Quiz_Projet_BTS.pro
 
 qmake_all: FORCE
 
