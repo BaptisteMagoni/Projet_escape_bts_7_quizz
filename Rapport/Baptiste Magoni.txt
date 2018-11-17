@@ -37,3 +37,13 @@
 	- Modification du gitignore pour éviter de commit les .o et les .exe
 	- Modification du GANTT, le projet est rendu à 84 %
 	- Commencer à réflichir pour envoyer le message GAGNE:7
+
+17/11/18:
+	- Ajout des musiques trouvé sur un seul et même programme. 
+	- Codage de l'algorithme pour s'avoir quelle musique choisir.
+	- Envoi des données depuis l'application pour choisir la musique
+	- Mise en place des messages d'erreurs pour s'il y a un problème l'administrateur comprenne ce qui se passe
+	Problème rencontré :
+		- Pas assez de mémoire sur la carte arduino pour acceuillir les 4 musiques
+		- Reflexion pour savoir si j'attend que la musique soit fini et j'active les boutons réponse
+		ou pendant la musique repondre a la question tout en même temps
