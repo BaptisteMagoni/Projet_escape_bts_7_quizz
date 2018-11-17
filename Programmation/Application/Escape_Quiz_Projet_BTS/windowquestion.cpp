@@ -15,6 +15,7 @@
 #include <string>
 #include <sstream>
 #include <QMessageBox>
+#include <unistd.h>
 
 using namespace std;
 
@@ -32,10 +33,12 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
         isMusicType = true;
     else
         isMusicType = false;
+    connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
     init_button_event();
     open_file();
     change_page();
     read_one_question();
+
 }
 
 WindowQuestion::~WindowQuestion()
@@ -65,6 +68,7 @@ void WindowQuestion::open_file(){
 }
 
 void WindowQuestion::read_one_question(){
+    set_state_button(false);
     for(unsigned int i=0;i<m_question.size();i++){
         if(m_question.at(i).compare("QuestionStart_"+int_to_str(question_number)) == 0){
             QStringList question_list = m_question.at(i+1).split(":");
@@ -82,6 +86,20 @@ void WindowQuestion::read_one_question(){
         }
     }
     change_page();
+}
+
+void WindowQuestion::set_state_button(bool state){
+    wq->pushButton_answer1->setEnabled(state);
+    wq->pushButton_answer2->setEnabled(state);
+    wq->pushButton_answer3->setEnabled(state);
+}
+
+void WindowQuestion::read_data(){
+    cout << "Message reçu : " << m_serial->readAll().toStdString() << endl;
+    if(m_serial->readAll() == "Finish")
+        set_state_button(true);
+    else
+        set_state_button(false);
 }
 
 void WindowQuestion::sendData(const QByteArray &data){

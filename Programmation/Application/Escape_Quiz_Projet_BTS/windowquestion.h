@@ -9,6 +9,7 @@
 #include <iostream>
 #include <QString>
 #include <QMessageBox>
+#include <QByteArray>
 
 namespace Ui{
     class ApplicationQuestion;
@@ -35,6 +36,7 @@ private:
     std::vector<QString> sequence_question;
     std::vector<int> m_error;
     std::vector<bool> answer_player;
+    QString button_list = {"answer1, answer2, answer3"};
     int question_number;
     int error;
     bool isMusicType;
@@ -50,11 +52,13 @@ private:
     void reset();
     void display_message_error();
     void sendData(const QByteArray &data);
+    void set_state_button(bool state);
     int get_nb_question();
     QString int_to_str(int num);
 
 private slots:
     void event_button();
+    void read_data();
 };
 
 #endif // WINDOWQUESTION_H

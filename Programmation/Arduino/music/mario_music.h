@@ -169,6 +169,4 @@ void sing(int s) {
 
 void play_mario(){
   sing(1);
-  sing(1);
-  sing(2);
 }
