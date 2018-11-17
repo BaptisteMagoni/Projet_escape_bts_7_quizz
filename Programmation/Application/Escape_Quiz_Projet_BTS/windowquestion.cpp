@@ -68,7 +68,8 @@ void WindowQuestion::open_file(){
 }
 
 void WindowQuestion::read_one_question(){
-    set_state_button(false);
+    if(isMusicType)
+        set_state_button(false);
     for(unsigned int i=0;i<m_question.size();i++){
         if(m_question.at(i).compare("QuestionStart_"+int_to_str(question_number)) == 0){
             QStringList question_list = m_question.at(i+1).split(":");
@@ -95,11 +96,14 @@ void WindowQuestion::set_state_button(bool state){
 }
 
 void WindowQuestion::read_data(){
-    QByteArray dddddd = m_serial->readAll();
-    if(dddddd == "Finish")
-        set_state_button(true);
-    else
-        set_state_button(false);
+    QByteArray data = m_serial->readAll();
+    cout << "Data recu : " << data.toStdString() << endl;
+    if(isMusicType){
+        if(data == "Finish" || data == "down")
+            set_state_button(true);
+        else
+            set_state_button(false);
+    }
 }
 
 void WindowQuestion::sendData(const QByteArray &data){

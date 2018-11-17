@@ -36,7 +36,6 @@ private:
     std::vector<QString> sequence_question;
     std::vector<int> m_error;
     std::vector<bool> answer_player;
-    QString button_list = {"answer1, answer2, answer3"};
     int question_number;
     int error;
     bool isMusicType;
@@ -59,6 +58,7 @@ private:
 private slots:
     void event_button();
     void read_data();
+
 };
 
 #endif // WINDOWQUESTION_H

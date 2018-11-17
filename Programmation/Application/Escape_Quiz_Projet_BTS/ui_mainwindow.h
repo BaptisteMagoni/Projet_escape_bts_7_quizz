@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -39,6 +39,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *espaceGauche;
     QComboBox *comboBox_com;
+    QPushButton *pushButton_refresh;
     QSpacerItem *espaceDroit;
     QWidget *ZoneBouton;
     QHBoxLayout *horizontalLayout_3;
@@ -91,8 +92,16 @@ public:
 
         comboBox_com = new QComboBox(ZoneComboBox);
         comboBox_com->setObjectName(QStringLiteral("comboBox_com"));
+        comboBox_com->setMinimumSize(QSize(170, 0));
+        comboBox_com->setSizeIncrement(QSize(0, 0));
+        comboBox_com->setBaseSize(QSize(0, 0));
 
         horizontalLayout_2->addWidget(comboBox_com);
+
+        pushButton_refresh = new QPushButton(ZoneComboBox);
+        pushButton_refresh->setObjectName(QStringLiteral("pushButton_refresh"));
+
+        horizontalLayout_2->addWidget(pushButton_refresh);
 
         espaceDroit = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -133,9 +142,14 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", Q_NULLPTR));
-        button_start->setText(QApplication::translate("MainWindow", "Valider", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", 0));
+        comboBox_com->clear();
+        comboBox_com->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "S\303\251l\303\251ctionner une carte arduino", 0)
+        );
+        pushButton_refresh->setText(QApplication::translate("MainWindow", "Rafra\303\256chir", 0));
+        button_start->setText(QApplication::translate("MainWindow", "Valider", 0));
     } // retranslateUi
 
 };

@@ -13,7 +13,7 @@ void setup(){
   Serial.begin(9600);
   //Mario
   //setupNyan();
-  pinMode(10, OUTPUT);//buzzer
+  pinMode(11, OUTPUT);//buzzer
   pinMode(13, OUTPUT);//led indicator when singing a note
 }
 
@@ -24,9 +24,9 @@ void loop(){
     break;
     case 2: mario();
     break;
-    case 3: Serial.println("Ne fonctionne pas");
+    case 3: Serial.println("down");
     break;
-    case 4: Serial.println("Ne fonctionne pas");
+    case 4: Serial.println("down");
     break;
 }
   

@@ -1,4 +1,4 @@
-#define PIEZO_PIN  (10)
+#define PIEZO_PIN  (11)
 
 // A rest
 #define _R     (0)

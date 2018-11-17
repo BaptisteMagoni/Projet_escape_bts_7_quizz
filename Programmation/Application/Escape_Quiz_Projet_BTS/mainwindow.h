@@ -16,6 +16,7 @@
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include <QLabel>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -41,16 +42,20 @@ private:
     void show_item_choice();
     void close_item_choice();
     void init_item_choice();
+    void display_message_box();
 
 private:
     Ui::MainWindow *ui;
     QSerialPort *m_serial;
     QWidget *m_parent;
+    QString m_message_error;
+    QMessageBox m_box;
 
 private slots:
     void CheckButton();
     void sendData(const QByteArray &data);
     void readData();
+    void refresh();
 };
 
 #endif // MAINWINDOW_H
