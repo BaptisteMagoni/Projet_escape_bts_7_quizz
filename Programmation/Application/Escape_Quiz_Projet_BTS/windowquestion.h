@@ -37,6 +37,7 @@ private:
     std::vector<bool> answer_player;
     int question_number;
     int error;
+    bool isMusicType;
 
 
 private:
@@ -48,6 +49,7 @@ private:
     void display_question(QString question, QString answer1, QString answer2, QString answer3);
     void reset();
     void display_message_error();
+    void sendData(const QByteArray &data);
     int get_nb_question();
     QString int_to_str(int num);
 

@@ -28,6 +28,10 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     error = 0;
     m_serial = serial;
     m_type_question = type_button;
+    if(m_type_question == "musical")
+        isMusicType = true;
+    else
+        isMusicType = false;
     init_button_event();
     open_file();
     change_page();
@@ -70,10 +74,19 @@ void WindowQuestion::read_one_question(){
             QStringList good_answer = m_question.at(i+5).split(":");
             answer = good_answer.at(1);
             answer = answer.replace(" ", "");
+            if(isMusicType){
+                QStringList data = m_question.at(i+6).split(":");
+                sendData(data.at(1).toLocal8Bit());
+            }
             display_question(question_list.at(1), answer1.at(1), answer2.at(1), answer3.at(1));
         }
     }
     change_page();
+}
+
+void WindowQuestion::sendData(const QByteArray &data){
+    m_serial->write(data);
+    cout << "Envoi : " << data.toStdString() << endl;
 }
 
 void WindowQuestion::display_question(QString question, QString answer1, QString answer2, QString answer3){
@@ -92,8 +105,8 @@ void WindowQuestion::change_page(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
-        WindowEnd *end = new WindowEnd(m_parent, m_serial, answer_player, int_to_str(get_nb_question()));
-        end->show();
+        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, answer_player, int_to_str(get_nb_question()));
+        endwindow->show();
     }
 }
 

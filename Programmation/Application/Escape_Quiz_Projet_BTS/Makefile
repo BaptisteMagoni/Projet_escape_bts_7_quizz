@@ -192,6 +192,7 @@ Makefile: Escape_Quiz_Projet_BTS.pro C:/Program\ Files\ (x86)/5.5/mingw492_32/mk
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Widgets.prl \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Gui.prl \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5SerialPort.prl \
+		C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Network.prl \
 		C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile Escape_Quiz_Projet_BTS.pro
 C:/Program\ Files\ (x86)/5.5/mingw492_32/mkspecs/features/spec_pre.prf:
@@ -327,6 +328,7 @@ C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/qtmain.prl:
 C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Widgets.prl:
 C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Gui.prl:
 C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5SerialPort.prl:
+C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Network.prl:
 C:/Program\ Files\ (x86)/5.5/mingw492_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ "CONFIG+=qml_debug" "CONFIG+=force_debug_info" "CONFIG+=separate_debug_info" -o Makefile Escape_Quiz_Projet_BTS.pro

@@ -4,6 +4,7 @@ Answer 1 : Star Trek
 Answer 2 : Star Wars 
 Answer 3 : BattleStar Galactica
 answer: 2
+send_data :1
 QuestionEnd
 
 QuestionStart_2
@@ -12,6 +13,7 @@ Answer 1 : Mario 64
 Answer 2 : Mario Galaxy
 Answer 3 : Mario bros 3
 answer: 3
+send_data :2
 QuestionEnd
 
 QuestionStart_3
@@ -19,7 +21,8 @@ Question : A quelle jeu cette musique vous fais penser ?
 Answer 1 : Tetris
 Answer 2 : Worms
 Answer 3 : Ape Escape
-answer: 2
+answer: 1
+send_data :3
 QuestionEnd
 
 QuestionStart_4
@@ -28,20 +31,23 @@ Answer 1 : Piano cat
 Answer 2 : SuperCat
 Answer 3 : NyanCat
 answer: 3
+send_data :4
 QuestionEnd
 
-QuestionStart_5
-Question :
-Answer 1 : 
-Answer 2 :
-Answer 3 :
-answer:
-QuestionEnd
+#QuestionStart_5
+#Question :
+#Answer 1 : 
+#Answer 2 :
+#Answer 3 :
+#answer:
+#send_data :5
+#QuestionEnd
 
-QuestionStart_6
-Question :
-Answer 1 : 
-Answer 2 :
-Answer 3 :
-answer:
-QuestionEnd
+#QuestionStart_6
+#Question :
+#Answer 1 : 
+#Answer 2 :
+#Answer 3 :
+#answer:
+#send_data :6
+#QuestionEnd
