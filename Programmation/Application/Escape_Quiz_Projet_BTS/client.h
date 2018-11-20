@@ -4,7 +4,7 @@
 #include <QTcpSocket>
 #include <QNetworkSession>
 
-class Client
+class Client : public QObject
 {
 public:
     Client();

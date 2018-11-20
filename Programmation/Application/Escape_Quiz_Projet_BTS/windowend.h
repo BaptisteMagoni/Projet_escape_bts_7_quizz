@@ -13,7 +13,6 @@ namespace Ui {
 
 class WindowEnd : public QWidget
 {
-
     Q_OBJECT
 
 public:
