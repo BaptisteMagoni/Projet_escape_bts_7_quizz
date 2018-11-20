@@ -47,3 +47,9 @@
 		- Pas assez de mémoire sur la carte arduino pour acceuillir les 4 musiques
 		- Reflexion pour savoir si j'attend que la musique soit fini et j'active les boutons réponse
 		ou pendant la musique repondre a la question tout en même temps
+
+20/11/18:
+	- Ajout du programme envoi de socket
+	- Résoudre le problème du manque de place pour les variable avec le professeur, 
+	nous avons décider de creer plusieur méthode et de les initialiser quand on les appelles
+	- Problème d'envoi de socket avec une application MainWindo
