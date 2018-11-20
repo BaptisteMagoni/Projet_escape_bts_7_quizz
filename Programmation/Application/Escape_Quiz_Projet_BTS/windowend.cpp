@@ -6,8 +6,6 @@
 #include <iostream>
 #include <windowchoice.h>
 #include <QMessageBox>
-#include <QtNetwork>
-#include "client.h"
 
 WindowEnd::WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all) :
     QWidget(parent),
@@ -20,7 +18,6 @@ WindowEnd::WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> sco
     m_number_all = answer_number_all;
     init_button();
     we->label_score->setText("Vous avez un total de " + QString::number(count_score()) + "/" + m_number_all + " bonne réponse !");
-    m_c = new Client();
 }
 
 WindowEnd::~WindowEnd(){
@@ -48,9 +45,14 @@ void WindowEnd::display_message_box(){
     m_message_box.exec();
 }
 
+void WindowEnd::send_socket(){
+
+}
+
 void WindowEnd::show_windowchoice(){
     this->close();
     display_message_box();
+    send_socket();
     WindowChoice *choice = new WindowChoice(m_parent, m_serial);
     choice->show();
 }

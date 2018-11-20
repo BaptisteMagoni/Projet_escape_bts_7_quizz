@@ -1,46 +1,44 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'windowend.h'
+** Meta object code from reading C++ file 'windowchoice.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.5.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Escape_Quiz_Projet_BTS/windowend.h"
+#include "../windowchoice.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'windowend.h' doesn't include <QObject>."
+#error "The header file 'windowchoice.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.0. It"
+#error "This file was generated using the moc from 5.5.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_WindowEnd_t {
+struct qt_meta_stringdata_WindowChoice_t {
     QByteArrayData data[3];
-    char stringdata0[24];
+    char stringdata0[34];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_WindowEnd_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_WindowChoice_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_WindowEnd_t qt_meta_stringdata_WindowEnd = {
+static const qt_meta_stringdata_WindowChoice_t qt_meta_stringdata_WindowChoice = {
     {
-QT_MOC_LITERAL(0, 0, 9), // "WindowEnd"
-QT_MOC_LITERAL(1, 10, 12), // "event_button"
-QT_MOC_LITERAL(2, 23, 0) // ""
+QT_MOC_LITERAL(0, 0, 12), // "WindowChoice"
+QT_MOC_LITERAL(1, 13, 19), // "event_button_choice"
+QT_MOC_LITERAL(2, 33, 0) // ""
 
     },
-    "WindowEnd\0event_button\0"
+    "WindowChoice\0event_button_choice\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_WindowEnd[] = {
+static const uint qt_meta_data_WindowChoice[] = {
 
  // content:
        7,       // revision
@@ -62,39 +60,39 @@ static const uint qt_meta_data_WindowEnd[] = {
        0        // eod
 };
 
-void WindowEnd::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void WindowChoice::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        WindowEnd *_t = static_cast<WindowEnd *>(_o);
+        WindowChoice *_t = static_cast<WindowChoice *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->event_button(); break;
+        case 0: _t->event_button_choice(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-const QMetaObject WindowEnd::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_WindowEnd.data,
-      qt_meta_data_WindowEnd,  qt_static_metacall, nullptr, nullptr}
+const QMetaObject WindowChoice::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_WindowChoice.data,
+      qt_meta_data_WindowChoice,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *WindowEnd::metaObject() const
+const QMetaObject *WindowChoice::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *WindowEnd::qt_metacast(const char *_clname)
+void *WindowChoice::qt_metacast(const char *_clname)
 {
-    if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_WindowEnd.stringdata0))
-        return static_cast<void*>(const_cast< WindowEnd*>(this));
+    if (!_clname) return Q_NULLPTR;
+    if (!strcmp(_clname, qt_meta_stringdata_WindowChoice.stringdata0))
+        return static_cast<void*>(const_cast< WindowChoice*>(this));
     return QWidget::qt_metacast(_clname);
 }
 
-int WindowEnd::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int WindowChoice::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -110,5 +108,4 @@ int WindowEnd::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     }
     return _id;
 }
-QT_WARNING_POP
 QT_END_MOC_NAMESPACE
