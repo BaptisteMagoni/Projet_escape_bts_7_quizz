@@ -27,93 +27,77 @@ class Ui_ApplicationEnd
 {
 public:
     QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
-    QVBoxLayout *verticalLayout_5;
+    QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
-    QLabel *label;
-    QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *verticalSpacer_3;
-    QVBoxLayout *verticalLayout_4;
-    QHBoxLayout *horizontalLayout_7;
-    QSpacerItem *horizontalSpacer_2;
     QLabel *label_score;
+    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_5;
+    QLabel *label;
     QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *verticalSpacer_2;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_finish;
     QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_2;
 
     void setupUi(QWidget *ApplicationEnd)
     {
         if (ApplicationEnd->objectName().isEmpty())
             ApplicationEnd->setObjectName(QStringLiteral("ApplicationEnd"));
-        ApplicationEnd->resize(479, 556);
-        ApplicationEnd->setMinimumSize(QSize(479, 556));
-        ApplicationEnd->setMaximumSize(QSize(479, 556));
+        ApplicationEnd->resize(478, 478);
         verticalLayout = new QVBoxLayout(ApplicationEnd);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        horizontalLayout = new QHBoxLayout();
+        widget = new QWidget(ApplicationEnd);
+        widget->setObjectName(QStringLiteral("widget"));
+        horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        label = new QLabel(ApplicationEnd);
-        label->setObjectName(QStringLiteral("label"));
-        label->setMaximumSize(QSize(365, 367));
-        label->setAutoFillBackground(true);
-        label->setTextFormat(Qt::AutoText);
-        label->setPixmap(QPixmap(QString::fromUtf8("../Picto-Mixed-Quizz.png")));
-        label->setScaledContents(true);
-        label->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout->addWidget(label);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_5);
-
-
-        verticalLayout_5->addLayout(horizontalLayout);
-
-
-        verticalLayout->addLayout(verticalLayout_5);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_3);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_7->addItem(horizontalSpacer_2);
-
-        label_score = new QLabel(ApplicationEnd);
+        label_score = new QLabel(widget);
         label_score->setObjectName(QStringLiteral("label_score"));
 
-        horizontalLayout_7->addWidget(label_score);
+        horizontalLayout->addWidget(label_score);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_7->addItem(horizontalSpacer_6);
-
-
-        verticalLayout_4->addLayout(horizontalLayout_7);
+        horizontalLayout->addItem(horizontalSpacer_2);
 
 
-        verticalLayout->addLayout(verticalLayout_4);
+        verticalLayout->addWidget(widget);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalSpacer_5 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_5);
+
+        label = new QLabel(ApplicationEnd);
+        label->setObjectName(QStringLiteral("label"));
+        label->setPixmap(QPixmap(QString::fromUtf8("../Picto-Mixed-Quizz.png")));
+        label->setScaledContents(true);
+
+        horizontalLayout_4->addWidget(label);
+
+        horizontalSpacer_6 = new QSpacerItem(100, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_6);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
 
         widget_2 = new QWidget(ApplicationEnd);
         widget_2->setObjectName(QStringLiteral("widget_2"));
@@ -125,9 +109,6 @@ public:
 
         pushButton_finish = new QPushButton(widget_2);
         pushButton_finish->setObjectName(QStringLiteral("pushButton_finish"));
-        pushButton_finish->setMinimumSize(QSize(75, 23));
-        pushButton_finish->setMaximumSize(QSize(100, 35));
-        pushButton_finish->setIconSize(QSize(40, 40));
 
         horizontalLayout_2->addWidget(pushButton_finish);
 
@@ -138,10 +119,6 @@ public:
 
         verticalLayout->addWidget(widget_2);
 
-        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_2);
-
 
         retranslateUi(ApplicationEnd);
 
@@ -151,8 +128,8 @@ public:
     void retranslateUi(QWidget *ApplicationEnd)
     {
         ApplicationEnd->setWindowTitle(QApplication::translate("ApplicationEnd", "Form", Q_NULLPTR));
-        label->setText(QString());
         label_score->setText(QApplication::translate("ApplicationEnd", "Score", Q_NULLPTR));
+        label->setText(QString());
         pushButton_finish->setText(QApplication::translate("ApplicationEnd", "J'ai fini", Q_NULLPTR));
     } // retranslateUi
 
