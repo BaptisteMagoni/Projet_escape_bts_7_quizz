@@ -70,6 +70,7 @@ public:
         label = new QLabel(ApplicationEnd);
         label->setObjectName(QStringLiteral("label"));
         label->setMaximumSize(QSize(365, 367));
+        label->setAutoFillBackground(true);
         label->setTextFormat(Qt::AutoText);
         label->setPixmap(QPixmap(QString::fromUtf8("../Picto-Mixed-Quizz.png")));
         label->setScaledContents(true);
@@ -124,6 +125,8 @@ public:
 
         pushButton_finish = new QPushButton(widget_2);
         pushButton_finish->setObjectName(QStringLiteral("pushButton_finish"));
+        pushButton_finish->setMinimumSize(QSize(75, 23));
+        pushButton_finish->setMaximumSize(QSize(100, 35));
         pushButton_finish->setIconSize(QSize(40, 40));
 
         horizontalLayout_2->addWidget(pushButton_finish);
