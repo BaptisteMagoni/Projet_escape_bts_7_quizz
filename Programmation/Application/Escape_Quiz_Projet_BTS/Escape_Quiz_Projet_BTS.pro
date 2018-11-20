@@ -28,13 +28,15 @@ SOURCES += \
         mainwindow.cpp \
     windowchoice.cpp \
     windowquestion.cpp \
-    windowend.cpp
+    windowend.cpp \
+    client.cpp
 
 HEADERS += \
         mainwindow.h \
     windowchoice.h \
     windowquestion.h \
-    windowend.h
+    windowend.h \
+    client.h
 
 FORMS += \
         mainwindow.ui \
