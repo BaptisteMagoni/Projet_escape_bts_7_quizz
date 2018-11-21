@@ -6,6 +6,7 @@
 #include <iostream>
 #include <windowchoice.h>
 #include <QMessageBox>
+#include <client.h>
 
 WindowEnd::WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all) :
     QWidget(parent),
@@ -18,6 +19,7 @@ WindowEnd::WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> sco
     m_number_all = answer_number_all;
     init_button();
     we->label_score->setText("Vous avez un total de " + QString::number(count_score()) + "/" + m_number_all + " bonne réponse !");
+    m_client = new Client();
 }
 
 WindowEnd::~WindowEnd(){

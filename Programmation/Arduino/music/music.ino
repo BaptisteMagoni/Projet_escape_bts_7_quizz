@@ -1,8 +1,8 @@
 //Include folder mario
 #include <SoftwareSerial.h>
 #include "vador_music.h"
-#include "teris_music.h";
-#include "mario_music.h";
+#include "teris_music.h"
+#include "mario_music.h"
 
 //#include "nyan_cat.h"
 

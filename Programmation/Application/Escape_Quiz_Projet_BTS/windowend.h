@@ -6,6 +6,7 @@
 #include <iostream>
 #include <QSerialPort>
 #include <QMessageBox>
+#include <client.h>
 
 namespace Ui {
     class ApplicationEnd;
@@ -26,6 +27,7 @@ private:
     QWidget *m_parent;
     QSerialPort *m_serial;
     QMessageBox m_message_box;
+    Client *m_client;
 
 private:
     int count_score();

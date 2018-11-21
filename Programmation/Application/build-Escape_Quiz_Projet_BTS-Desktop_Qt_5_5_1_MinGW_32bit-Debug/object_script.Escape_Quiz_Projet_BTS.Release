@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\windowchoice.o
+./release\windowquestion.o
+./release\windowend.o
+./release\client.o
+./release\moc_mainwindow.o
+./release\moc_windowchoice.o
+./release\moc_windowquestion.o
+./release\moc_windowend.o
+);
