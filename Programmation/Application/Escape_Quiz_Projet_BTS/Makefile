@@ -132,10 +132,6 @@ Makefile: Escape_Quiz_Projet_BTS.pro C:/Qt/5.5/mingw492_32/mkspecs/win32-g++/qma
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickparticles_private.pri \
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickwidgets.pri \
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_script.pri \
-		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_script_private.pri \
-		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_scripttools.pri \
-		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_scripttools_private.pri \
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_sensors.pri \
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_sensors_private.pri \
 		C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_serialport.pri \
@@ -272,10 +268,6 @@ C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quick_private.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickparticles_private.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickwidgets.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_script.pri:
-C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_script_private.pri:
-C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_scripttools.pri:
-C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_scripttools_private.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_sensors.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_sensors_private.pri:
 C:/Qt/5.5/mingw492_32/mkspecs/modules/qt_lib_serialport.pri:

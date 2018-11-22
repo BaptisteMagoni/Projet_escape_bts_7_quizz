@@ -274,7 +274,7 @@
          <string notr="true">background-color: rgb(255, 255, 0)</string>
         </property>
         <property name="text">
-         <string>Quizz mixte</string>
+         <string>Quizz aléatoire</string>
         </property>
        </widget>
       </item>
