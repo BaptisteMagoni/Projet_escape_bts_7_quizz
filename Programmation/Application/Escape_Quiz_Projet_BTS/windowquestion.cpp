@@ -117,7 +117,7 @@ void WindowQuestion::sendData(const QByteArray &data){
 }
 
 void WindowQuestion::addQuestion(QString question, QString answer1, QString answer2, QString answer3){
-    for
+
 }
 
 void WindowQuestion::display_question(QString question, QString answer1, QString answer2, QString answer3){

@@ -4,7 +4,7 @@ using namespace std;
 
 Question::Question()
 {
-    isUse = false;
+    m_isUse = false;
 }
 
 Question::~Question()

@@ -148,7 +148,7 @@ public:
         ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", 0));
         pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
         pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
-        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz mixte", 0));
+        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", 0));
     } // retranslateUi
 
 };

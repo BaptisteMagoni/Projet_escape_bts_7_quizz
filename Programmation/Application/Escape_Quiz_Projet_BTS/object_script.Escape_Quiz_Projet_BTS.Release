@@ -5,6 +5,7 @@ INPUT(
 ./release\windowquestion.o
 ./release\windowend.o
 ./release\client.o
+./release\question.o
 ./release\moc_mainwindow.o
 ./release\moc_windowchoice.o
 ./release\moc_windowquestion.o

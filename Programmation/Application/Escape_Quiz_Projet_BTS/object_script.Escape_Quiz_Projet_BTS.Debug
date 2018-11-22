@@ -5,6 +5,7 @@ INPUT(
 ./debug\windowquestion.o
 ./debug\windowend.o
 ./debug\client.o
+./debug\question.o
 ./debug\moc_mainwindow.o
 ./debug\moc_windowchoice.o
 ./debug\moc_windowquestion.o
