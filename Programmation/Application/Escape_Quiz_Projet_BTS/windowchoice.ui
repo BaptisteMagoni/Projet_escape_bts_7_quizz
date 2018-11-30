@@ -56,12 +56,39 @@
         <property name="palette">
          <palette>
           <active>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>0</red>
               <green>170</green>
               <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -94,12 +121,39 @@
            </colorrole>
           </active>
           <inactive>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>0</red>
               <green>170</green>
               <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -132,12 +186,39 @@
            </colorrole>
           </inactive>
           <disabled>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
            <colorrole role="Button">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>0</red>
               <green>170</green>
               <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Text">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>255</red>
+              <green>255</green>
+              <blue>255</blue>
              </color>
             </brush>
            </colorrole>
@@ -172,7 +253,9 @@
          </palette>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 170, 0)</string>
+         <string notr="true">background-color: rgb(0, 170, 0);
+color: rgb(255, 255, 255);
+font: 12pt &quot;Comic Sans MS&quot;;</string>
         </property>
         <property name="text">
          <string>Quizz Musical</string>
@@ -220,7 +303,9 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 0, 0)</string>
+         <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+font: 12pt &quot;Comic Sans MS&quot;;</string>
         </property>
         <property name="text">
          <string>Quizz Informatique</string>
@@ -271,7 +356,9 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 0)</string>
+         <string notr="true">background-color: rgb(255, 255, 0);
+color: rgb(255, 255, 255);
+font: 12pt &quot;Comic Sans MS&quot;;</string>
         </property>
         <property name="text">
          <string>Quizz aléatoire</string>

@@ -133,6 +133,10 @@
        </item>
        <item>
         <widget class="QLabel" name="label_score">
+         <property name="styleSheet">
+          <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: 12pt &quot;Comic Sans MS&quot;;</string>
+         </property>
          <property name="text">
           <string>Score</string>
          </property>
@@ -184,6 +188,11 @@
           <width>100</width>
           <height>35</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: 12pt &quot;Comic Sans MS&quot;;</string>
         </property>
         <property name="text">
          <string>J'ai fini</string>

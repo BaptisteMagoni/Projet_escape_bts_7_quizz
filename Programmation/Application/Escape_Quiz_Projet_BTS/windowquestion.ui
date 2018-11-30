@@ -32,6 +32,10 @@
       </item>
       <item>
        <widget class="QLabel" name="label_page">
+        <property name="styleSheet">
+         <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: italic 8pt &quot;Comic Sans MS&quot;;</string>
+        </property>
         <property name="text">
          <string>{page}/{nb_de_page}</string>
         </property>
@@ -67,6 +71,10 @@
          </item>
          <item>
           <widget class="QLabel" name="label_question_ligne1">
+           <property name="styleSheet">
+            <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: 12pt &quot;Comic Sans MS&quot;;</string>
+           </property>
            <property name="text">
             <string>Question_ligne1</string>
            </property>
@@ -112,6 +120,10 @@
          </item>
          <item>
           <widget class="QLabel" name="label_question_ligne2">
+           <property name="styleSheet">
+            <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: 12pt &quot;Comic Sans MS&quot;;</string>
+           </property>
            <property name="text">
             <string>Question_ligne2</string>
            </property>
@@ -173,6 +185,11 @@
           <height>75</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+color: rgb(255, 255, 255);
+font: 12pt &quot;Comic Sans MS&quot;;</string>
+        </property>
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -231,6 +248,11 @@
           <height>75</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));
+font: 12pt &quot;Comic Sans MS&quot;;</string>
+        </property>
         <property name="text">
          <string>PushButton</string>
         </property>
@@ -288,6 +310,11 @@
           <width>370</width>
           <height>75</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Comic Sans MS&quot;;
+color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));</string>
         </property>
         <property name="text">
          <string>PushButton</string>
