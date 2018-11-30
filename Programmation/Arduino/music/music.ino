@@ -1,8 +1,8 @@
 //Include folder mario
 #include <SoftwareSerial.h>
 #include "vador_music.h"
-#include "teris_music.h";
-#include "mario_music.h";
+#include "teris_music.h"
+#include "mario_music.h"
 
 //#include "nyan_cat.h"
 
@@ -18,16 +18,18 @@ void setup(){
 }
 
 void loop(){
-  m_data = Serial.parseInt();
-  switch(m_data){
-    case 1: vador();
-    break;
-    case 2: mario();
-    break;
-    case 3: Serial.println("down");
-    break;
-    case 4: Serial.println("down");
-    break;
+  if(Serial.available() > 0){
+    m_data = Serial.parseInt();
+    switch(m_data){
+      case 1: vador();
+      break;
+      case 2: mario();
+      break;
+      case 3: Serial.println("down");
+      break;
+      case 4: Serial.println("down");
+      break;
+  }
 }
   
   //play_mario();

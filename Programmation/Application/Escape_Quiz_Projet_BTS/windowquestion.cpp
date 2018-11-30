@@ -47,7 +47,12 @@ WindowQuestion::~WindowQuestion()
 }
 
 void WindowQuestion::open_file(){
-    QString nom_fichier = "mes_quizz/quizz_" + m_type_question + ".quizz";
+    QString nom_fichier = NULL;
+    if(m_type_question.compare("aléatoire") != 0)
+        nom_fichier = "mes_quizz/quizz_" + m_type_question + ".quizz";
+    else{
+        //A faire pas trouver la solution
+    }
     if(nom_fichier.isEmpty()) return;
 
     QFile file(nom_fichier);
@@ -99,7 +104,7 @@ void WindowQuestion::read_data(){
     QByteArray data = m_serial->readAll();
     cout << "Data recu : " << data.toStdString() << endl;
     if(isMusicType){
-        if(data == "Finish" || data == "down")
+        if(data == "Finish")
             set_state_button(true);
         else
             set_state_button(false);
@@ -109,6 +114,10 @@ void WindowQuestion::read_data(){
 void WindowQuestion::sendData(const QByteArray &data){
     m_serial->write(data);
     cout << "Envoi : " << data.toStdString() << endl;
+}
+
+void WindowQuestion::addQuestion(QString question, QString answer1, QString answer2, QString answer3){
+
 }
 
 void WindowQuestion::display_question(QString question, QString answer1, QString answer2, QString answer3){
@@ -127,7 +136,7 @@ void WindowQuestion::change_page(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
-        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, answer_player, int_to_str(get_nb_question()));
+        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, m_answer_player, int_to_str(get_nb_question()));
         endwindow->show();
     }
 }
@@ -151,9 +160,9 @@ void WindowQuestion::event_button(){
 void WindowQuestion::check_answer(QString answerplayer){
     answerplayer = answerplayer.replace("answer", "");
     if(answerplayer.compare(answer) == 0){
-        answer_player.push_back(true);
+        m_answer_player.push_back(true);
     }else{
-        answer_player.push_back(false);
+        m_answer_player.push_back(false);
         m_error.push_back(error++);
     }
     if(m_error.size() == 3) {
@@ -175,7 +184,7 @@ void WindowQuestion::display_message_error(){
 void WindowQuestion::reset(){
     error = 0;
     question_number = 1;
-    answer_player.clear();
+    m_answer_player.clear();
     m_error.clear();
     m_message_error = "Vous vous êtes trompé 3 fois. Vous recommencer du début !";
 }

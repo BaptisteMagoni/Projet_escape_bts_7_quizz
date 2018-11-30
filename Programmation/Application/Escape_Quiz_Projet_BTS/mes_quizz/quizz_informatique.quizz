@@ -37,3 +37,35 @@ Answer 2:Windows
 Answer 3:Linux
 answer: 3
 QuestionEnd
+
+QuestionStart_6
+Question :Quel composant est apparue en 1959 ?
+Answer 1:Le microprocesseur
+Answer 2:Le circuit intégrer
+Answer 3:Un processeur
+Answer: 2
+QuestionEnd
+
+QuestionStart_7
+Question :Quel est l'origine du mot bug ?
+Answer 1:Un insect qui à provoqué un faux contact
+Answer 2:Je sais pas
+Answer 3:Je sais pas
+Answer: 1
+QuestionEnd
+
+QuestionStart_8
+Question :Que donne la commande ls -rtl
+Answer 1:Je sais pas
+Answer 2:Je sais pas
+Answer 3:Je sais ap
+Answer: 3
+QuestionEnd
+
+QuestionStart_9
+Question :Que veux dire IP (en anglais) ?
+Answer 1:Internet Protocol
+Answer 2:IT Protocol
+Answer 3:IP Protocol
+Answer: 1
+QuestionEnd

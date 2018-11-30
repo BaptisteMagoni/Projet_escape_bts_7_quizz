@@ -5,16 +5,17 @@
 #include <QTcpSocket>
 #include <QNetworkSession>
 #include <QByteArray>
+#include <sstream>
 
 Client::Client() : m_networkSession(0)
 {
 
     std::cout << "Application Client" << std::endl;
-        m_tcpSocket = new QTcpSocket(this);
+        m_tcpSocket = new QTcpSocket();
         QNetworkConfiguration config;
 
         std::cout << "Ouverture session" << std::endl;
-        m_networkSession = new QNetworkSession(config, this);
+        m_networkSession = new QNetworkSession(config);
 
         m_networkSession->open();
 
