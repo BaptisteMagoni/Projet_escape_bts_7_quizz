@@ -104,7 +104,7 @@ void WindowQuestion::read_data(){
     QByteArray data = m_serial->readAll();
     cout << "Data recu : " << data.toStdString() << endl;
     if(isMusicType){
-        if(data == "Finish")
+        if(data == "5")
             set_state_button(true);
         else
             set_state_button(false);

@@ -1,11 +1,10 @@
 //Include folder mario
 #include <SoftwareSerial.h>
 #include "vador_music.h"
-#include "teris_music.h"
 #include "mario_music.h"
 #include "reine_des_neiges.h"
-
-//#include "nyan_cat.h"
+#include "noel.h"
+#include "claire.h"
 
 int m_data = 0;
 
@@ -13,7 +12,6 @@ void setup(){
 
   Serial.begin(9600);
   //Mario
-  //setupNyan();
   pinMode(11, OUTPUT);//buzzer
   pinMode(13, OUTPUT);//led indicator when singing a note
 }
@@ -25,11 +23,13 @@ void loop(){
     break;
     case 2: mario();
     break;
-    case 3: tetris();
+    case 3: noel();
     break;
     case 4: reine_des_neiges();
     break;
     case 5: reine_des_neiges();
+    break;
+    case 6: noel();
     break;
 }
   
@@ -44,10 +44,10 @@ void mario(){
   send_finish();
 }
 
-void tetris(){
+/*void tetris(){
   play_tetris();
   send_finish();
-}
+}*/
 
 void vador(){
   play_vador();
@@ -56,6 +56,11 @@ void vador(){
 
 void reine_des_neiges(){
   play_reine_des_neiges();
+  send_finish();
+}
+
+void noel(){
+  play_noel();
   send_finish();
 }
 
