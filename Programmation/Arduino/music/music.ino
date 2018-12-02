@@ -3,6 +3,7 @@
 #include "vador_music.h"
 #include "teris_music.h"
 #include "mario_music.h"
+#include "reine_des_neiges.h"
 
 //#include "nyan_cat.h"
 
@@ -18,18 +19,18 @@ void setup(){
 }
 
 void loop(){
-  if(Serial.available() > 0){
-    m_data = Serial.parseInt();
-    switch(m_data){
-      case 1: vador();
-      break;
-      case 2: mario();
-      break;
-      case 3: Serial.println("down");
-      break;
-      case 4: Serial.println("down");
-      break;
-  }
+  m_data = Serial.parseInt();
+  switch(m_data){
+    case 1: vador();
+    break;
+    case 2: mario();
+    break;
+    case 3: tetris();
+    break;
+    case 4: reine_des_neiges();
+    break;
+    case 5: reine_des_neiges();
+    break;
 }
   
   //play_mario();
@@ -53,7 +54,12 @@ void vador(){
   send_finish();
 }
 
+void reine_des_neiges(){
+  play_reine_des_neiges();
+  send_finish();
+}
+
 void send_finish(){
-  Serial.write("Finish");
+  Serial.write("5");
 }
 
