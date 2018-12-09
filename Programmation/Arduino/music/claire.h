@@ -36,7 +36,6 @@ void play_claire()
     if (notes1[i] == ' ')
     {
       delay(beats[i] * tempo3); // repos
-      Serial.write("caca");
     }
     else
     {
