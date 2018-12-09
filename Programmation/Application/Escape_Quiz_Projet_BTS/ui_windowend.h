@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowend.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -53,6 +53,7 @@ public:
         ApplicationEnd->resize(479, 556);
         ApplicationEnd->setMinimumSize(QSize(479, 556));
         ApplicationEnd->setMaximumSize(QSize(479, 556));
+        ApplicationEnd->setStyleSheet(QStringLiteral("background-color: rgb(203, 203, 152);"));
         verticalLayout = new QVBoxLayout(ApplicationEnd);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
@@ -70,7 +71,7 @@ public:
         label = new QLabel(ApplicationEnd);
         label->setObjectName(QStringLiteral("label"));
         label->setMaximumSize(QSize(365, 367));
-        label->setAutoFillBackground(true);
+        label->setAutoFillBackground(false);
         label->setTextFormat(Qt::AutoText);
         label->setPixmap(QPixmap(QString::fromUtf8("../Picto-Mixed-Quizz.png")));
         label->setScaledContents(true);
@@ -102,6 +103,8 @@ public:
 
         label_score = new QLabel(ApplicationEnd);
         label_score->setObjectName(QStringLiteral("label_score"));
+        label_score->setStyleSheet(QLatin1String("color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_7->addWidget(label_score);
 
@@ -127,6 +130,9 @@ public:
         pushButton_finish->setObjectName(QStringLiteral("pushButton_finish"));
         pushButton_finish->setMinimumSize(QSize(75, 23));
         pushButton_finish->setMaximumSize(QSize(100, 35));
+        pushButton_finish->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: 12pt \"Comic Sans MS\";"));
         pushButton_finish->setIconSize(QSize(40, 40));
 
         horizontalLayout_2->addWidget(pushButton_finish);
@@ -150,10 +156,10 @@ public:
 
     void retranslateUi(QWidget *ApplicationEnd)
     {
-        ApplicationEnd->setWindowTitle(QApplication::translate("ApplicationEnd", "Form", Q_NULLPTR));
+        ApplicationEnd->setWindowTitle(QApplication::translate("ApplicationEnd", "Form", 0));
         label->setText(QString());
-        label_score->setText(QApplication::translate("ApplicationEnd", "Score", Q_NULLPTR));
-        pushButton_finish->setText(QApplication::translate("ApplicationEnd", "J'ai fini", Q_NULLPTR));
+        label_score->setText(QApplication::translate("ApplicationEnd", "Score", 0));
+        pushButton_finish->setText(QApplication::translate("ApplicationEnd", "J'ai fini", 0));
     } // retranslateUi
 
 };

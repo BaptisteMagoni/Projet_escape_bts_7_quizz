@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowquestion.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -61,6 +61,10 @@ public:
     QSpacerItem *horizontalSpacer_7;
     QPushButton *pushButton_answer3;
     QSpacerItem *horizontalSpacer_8;
+    QWidget *widget_rejouer;
+    QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_12;
+    QPushButton *pushButton_rejouer;
 
     void setupUi(QWidget *ApplicationQuestion)
     {
@@ -79,6 +83,8 @@ public:
 
         label_page = new QLabel(widget_5);
         label_page->setObjectName(QStringLiteral("label_page"));
+        label_page->setStyleSheet(QLatin1String("color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: italic 8pt \"Comic Sans MS\";"));
 
         horizontalLayout_5->addWidget(label_page);
 
@@ -100,6 +106,8 @@ public:
 
         label_question_ligne1 = new QLabel(widget_7);
         label_question_ligne1->setObjectName(QStringLiteral("label_question_ligne1"));
+        label_question_ligne1->setStyleSheet(QLatin1String("color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout->addWidget(label_question_ligne1);
 
@@ -121,6 +129,8 @@ public:
 
         label_question_ligne2 = new QLabel(widget_6);
         label_question_ligne2->setObjectName(QStringLiteral("label_question_ligne2"));
+        label_question_ligne2->setStyleSheet(QLatin1String("color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_6->addWidget(label_question_ligne2);
 
@@ -149,6 +159,9 @@ public:
         pushButton_answer1 = new QPushButton(widget_2);
         pushButton_answer1->setObjectName(QStringLiteral("pushButton_answer1"));
         pushButton_answer1->setMinimumSize(QSize(370, 75));
+        pushButton_answer1->setStyleSheet(QLatin1String("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_2->addWidget(pushButton_answer1);
 
@@ -174,6 +187,9 @@ public:
         pushButton_answer2 = new QPushButton(widget_3);
         pushButton_answer2->setObjectName(QStringLiteral("pushButton_answer2"));
         pushButton_answer2->setMinimumSize(QSize(370, 75));
+        pushButton_answer2->setStyleSheet(QLatin1String("color: rgb(255, 255, 255);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_3->addWidget(pushButton_answer2);
 
@@ -199,6 +215,9 @@ public:
         pushButton_answer3 = new QPushButton(widget_4);
         pushButton_answer3->setObjectName(QStringLiteral("pushButton_answer3"));
         pushButton_answer3->setMinimumSize(QSize(370, 75));
+        pushButton_answer3->setStyleSheet(QLatin1String("font: 12pt \"Comic Sans MS\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));"));
 
         horizontalLayout_4->addWidget(pushButton_answer3);
 
@@ -209,6 +228,27 @@ public:
 
         verticalLayout->addWidget(widget_4);
 
+        widget_rejouer = new QWidget(ApplicationQuestion);
+        widget_rejouer->setObjectName(QStringLiteral("widget_rejouer"));
+        horizontalLayout_7 = new QHBoxLayout(widget_rejouer);
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_12);
+
+        pushButton_rejouer = new QPushButton(widget_rejouer);
+        pushButton_rejouer->setObjectName(QStringLiteral("pushButton_rejouer"));
+        pushButton_rejouer->setStyleSheet(QLatin1String("font: 8pt \"Comic Sans MS\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228));\n"
+"border: 1px solid black;\n"
+"padding: 2px;"));
+
+        horizontalLayout_7->addWidget(pushButton_rejouer);
+
+
+        verticalLayout->addWidget(widget_rejouer);
+
 
         retranslateUi(ApplicationQuestion);
 
@@ -217,13 +257,14 @@ public:
 
     void retranslateUi(QWidget *ApplicationQuestion)
     {
-        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", Q_NULLPTR));
-        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", Q_NULLPTR));
-        label_question_ligne1->setText(QApplication::translate("ApplicationQuestion", "Question_ligne1", Q_NULLPTR));
-        label_question_ligne2->setText(QApplication::translate("ApplicationQuestion", "Question_ligne2", Q_NULLPTR));
-        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
-        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
-        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", 0));
+        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", 0));
+        label_question_ligne1->setText(QApplication::translate("ApplicationQuestion", "Question_ligne1", 0));
+        label_question_ligne2->setText(QApplication::translate("ApplicationQuestion", "Question_ligne2", 0));
+        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
+        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
+        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
+        pushButton_rejouer->setText(QApplication::translate("ApplicationQuestion", "Rejouer la musique", 0));
     } // retranslateUi
 
 };

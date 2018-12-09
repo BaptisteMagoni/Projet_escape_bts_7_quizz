@@ -38,6 +38,8 @@ private:
     std::vector<int> m_error;
     std::vector<bool> m_answer_player;
     std::vector<Question> m_question_list;
+    std::vector<QString> m_data_rx;
+    std::vector<QPushButton*> m_list_button;
     int question_number;
     int error;
     bool isMusicType;
@@ -56,11 +58,11 @@ private:
     void set_state_button(bool state);
     int get_nb_question();
     QString int_to_str(int num);
-    void addQuestion(QString question, QString answer1, QString answer2, QString answer3);
 
 private slots:
     void event_button();
     void read_data();
+    void rejouer();
 
 };
 

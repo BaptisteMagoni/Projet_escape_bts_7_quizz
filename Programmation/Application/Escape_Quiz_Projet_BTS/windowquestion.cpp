@@ -29,10 +29,16 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     error = 0;
     m_serial = serial;
     m_type_question = type_button;
-    if(m_type_question == "musical")
+    if(m_type_question == "musical"){
         isMusicType = true;
-    else
+        wq->widget_rejouer->show();
+    }else{
         isMusicType = false;
+        wq->widget_rejouer->hide();
+    }
+    m_list_button.push_back(wq->pushButton_answer1);
+    m_list_button.push_back(wq->pushButton_answer2);
+    m_list_button.push_back(wq->pushButton_answer3);
     connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
     init_button_event();
     open_file();
@@ -44,6 +50,13 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
 WindowQuestion::~WindowQuestion()
 {
     delete wq;
+}
+
+void WindowQuestion::init_button_event(){
+    connect(wq->pushButton_answer1, SIGNAL (released()), this, SLOT(event_button()));
+    connect(wq->pushButton_answer2, SIGNAL (released()), this, SLOT(event_button()));
+    connect(wq->pushButton_answer3, SIGNAL (released()), this, SLOT(event_button()));
+    connect(wq->pushButton_rejouer, SIGNAL (released()), this, SLOT(rejouer()));
 }
 
 void WindowQuestion::open_file(){
@@ -72,6 +85,16 @@ void WindowQuestion::open_file(){
     }
 }
 
+void WindowQuestion::rejouer(){
+    for(unsigned int i=0;i<m_question.size();i++){
+        if(m_question.at(i).compare("QuestionStart_"+int_to_str(question_number)) == 0){
+            QStringList data = m_question.at(i+6).split(":");
+            sendData(data.at(1).toLocal8Bit());
+            set_state_button(false);
+        }
+    }
+}
+
 void WindowQuestion::read_one_question(){
     if(isMusicType)
         set_state_button(false);
@@ -95,29 +118,40 @@ void WindowQuestion::read_one_question(){
 }
 
 void WindowQuestion::set_state_button(bool state){
-    wq->pushButton_answer1->setEnabled(state);
-    wq->pushButton_answer2->setEnabled(state);
-    wq->pushButton_answer3->setEnabled(state);
+    for(unsigned int i=0;i<m_list_button.size();i++){
+        QPushButton *button = m_list_button.at(i);
+        button->setEnabled(state);
+        if(state)
+            button->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(223, 67, 28, 228)); "
+                                  "color: rgb(255, 255, 255); "
+                                  "font: 12pt \"Comic Sans MS\";");
+        else
+            button->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:1 rgba(242, 113, 81, 228)); "
+                                  "color: rgb(255, 255, 255); "
+                                  "font: 12pt \"Comic Sans MS\";");
+    }
 }
 
 void WindowQuestion::read_data(){
     QByteArray data = m_serial->readAll();
     cout << "Data recu : " << data.toStdString() << endl;
+    m_data_rx.push_back(data);
+    QString data_all = "";
+    for(unsigned int i=0;i<m_data_rx.size();i++)
+        data_all += m_data_rx.at(i);
     if(isMusicType){
-        if(data == "5")
+        if(data_all == "Finish")
             set_state_button(true);
         else
             set_state_button(false);
+        m_data_rx.clear();
     }
+
 }
 
 void WindowQuestion::sendData(const QByteArray &data){
     m_serial->write(data);
     cout << "Envoi : " << data.toStdString() << endl;
-}
-
-void WindowQuestion::addQuestion(QString question, QString answer1, QString answer2, QString answer3){
-
 }
 
 void WindowQuestion::display_question(QString question, QString answer1, QString answer2, QString answer3){
@@ -187,10 +221,4 @@ void WindowQuestion::reset(){
     m_answer_player.clear();
     m_error.clear();
     m_message_error = "Vous vous êtes trompé 3 fois. Vous recommencer du début !";
-}
-
-void WindowQuestion::init_button_event(){
-    connect(wq->pushButton_answer1, SIGNAL (released()), this, SLOT(event_button()));
-    connect(wq->pushButton_answer2, SIGNAL (released()), this, SLOT(event_button()));
-    connect(wq->pushButton_answer3, SIGNAL (released()), this, SLOT(event_button()));
 }

@@ -47,6 +47,7 @@ public:
         if (ApplicationMode->objectName().isEmpty())
             ApplicationMode->setObjectName(QStringLiteral("ApplicationMode"));
         ApplicationMode->resize(478, 602);
+        ApplicationMode->setStyleSheet(QStringLiteral("background-color: rgb(203, 203, 152);"));
         verticalLayout = new QVBoxLayout(ApplicationMode);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         widget_2 = new QWidget(ApplicationMode);
@@ -64,24 +65,37 @@ public:
         pushButton_musical->setSizeIncrement(QSize(1000, 1000));
         pushButton_musical->setBaseSize(QSize(1000, 10000));
         QPalette palette;
-        QBrush brush(QColor(0, 170, 0, 255));
+        QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette.setBrush(QPalette::Active, QPalette::Highlight, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        QBrush brush1(QColor(51, 153, 255, 255));
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(0, 170, 0, 255));
         brush1.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::Highlight, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Highlight, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Highlight, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        QBrush brush2(QColor(51, 153, 255, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::Highlight, brush2);
         pushButton_musical->setPalette(palette);
-        pushButton_musical->setStyleSheet(QStringLiteral("background-color: rgb(0, 170, 0)"));
+        pushButton_musical->setStyleSheet(QLatin1String("background-color: rgb(0, 170, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_2->addWidget(pushButton_musical);
 
@@ -103,7 +117,9 @@ public:
         pushButton_informatique = new QPushButton(widget_3);
         pushButton_informatique->setObjectName(QStringLiteral("pushButton_informatique"));
         pushButton_informatique->setMinimumSize(QSize(400, 170));
-        pushButton_informatique->setStyleSheet(QStringLiteral("background-color: rgb(255, 0, 0)"));
+        pushButton_informatique->setStyleSheet(QLatin1String("background-color: rgb(255, 0, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout_3->addWidget(pushButton_informatique);
 
@@ -126,7 +142,9 @@ public:
         pushButton_mixte->setObjectName(QStringLiteral("pushButton_mixte"));
         pushButton_mixte->setEnabled(false);
         pushButton_mixte->setMinimumSize(QSize(400, 170));
-        pushButton_mixte->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 0)"));
+        pushButton_mixte->setStyleSheet(QLatin1String("background-color: rgb(255, 255, 0);\n"
+"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Comic Sans MS\";"));
 
         horizontalLayout->addWidget(pushButton_mixte);
 

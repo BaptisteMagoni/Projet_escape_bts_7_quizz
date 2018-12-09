@@ -97,6 +97,6 @@ void simpsons_loop(){
 }
 
 void send_finish(){
-  Serial.write("5");
+  Serial.write("Finish");
 }
 
