@@ -53,3 +53,7 @@
 	- Résoudre le problème du manque de place pour les variable avec le professeur, 
 	nous avons décider de creer plusieur méthode et de les initialiser quand on les appelles
 	- Problème d'envoi de socket avec une application MainWindo
+
+14/12/18: 
+	- Finition de l'envoi socket au server de jeux
+	- Ajout d'un lineEdit pour entrez l'ip du serveur sur la page de configuration de l'administrateur
