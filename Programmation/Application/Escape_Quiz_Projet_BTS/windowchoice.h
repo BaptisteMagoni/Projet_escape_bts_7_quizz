@@ -5,6 +5,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <iostream>
+#include <client.h>
 
 namespace Ui {
     class ApplicationMode;
@@ -16,13 +17,14 @@ class WindowChoice : public QWidget
     Q_OBJECT
 
 public:
-    WindowChoice(QWidget *parent, QSerialPort *serial);
+    WindowChoice(QWidget *parent, QSerialPort *serial, Client *client);
     ~WindowChoice();
 
 private:
     Ui::ApplicationMode *wc;
     QSerialPort *m_serial;
     QWidget *m_parent;
+    Client * m_client;
 
 private:
     void init_widget_question();

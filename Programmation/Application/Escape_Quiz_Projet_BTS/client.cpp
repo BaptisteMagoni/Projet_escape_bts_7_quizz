@@ -7,27 +7,39 @@
 #include <QByteArray>
 #include <sstream>
 
-Client::Client() : m_networkSession(0)
+Client::Client() :
+    m_networkSession(0)
 {
+    connection_socket();
+}
 
+Client::Client(QString addr){
+    connection_socket(addr);
+}
+
+void Client::connection_socket(QString addr){
+    m_state_connection = false;
     std::cout << "Application Client" << std::endl;
-        m_tcpSocket = new QTcpSocket();
-        QNetworkConfiguration config;
+    m_tcpSocket = new QTcpSocket(this);
+    QNetworkConfiguration config;
 
-        std::cout << "Ouverture session" << std::endl;
-        m_networkSession = new QNetworkSession(config);
+    std::cout << "Ouverture session" << std::endl;
+    m_networkSession = new QNetworkSession(config, this);
 
-        m_networkSession->open();
+    m_networkSession->open();
 
-        m_blockSize = 0;
-        m_tcpSocket->abort();
-
-        // connexion au serveur sur le port 53000
+    m_blockSize = 0;
+    m_tcpSocket->abort();
+    if(addr == NULL)
         m_tcpSocket->connectToHost( QHostAddress("10.16.3.214").toString(),53000);
-        send_data("GAGNE:7");
+    else
+        m_tcpSocket->connectToHost( QHostAddress(addr).toString(),53000);
+    m_state_connection = m_tcpSocket->state();
 
 }
 
+//###############################################################################################################
+// Méthode envoyant un texte au client
 void Client::send_data( const std::string& s )
 {
     std::cout << "Envoi de : " << s << std::endl;
@@ -41,4 +53,12 @@ void Client::send_data( const std::string& s )
     out << (quint16)(block.size() - sizeof(quint16));
 
     m_tcpSocket->write(block);
+}
+
+bool Client::getStateConnection(){
+    return m_state_connection;
+}
+
+void Client::finish(){
+    send_data("GAGNE:7");
 }

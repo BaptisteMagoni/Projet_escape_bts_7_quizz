@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -17,6 +17,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -41,6 +42,12 @@ public:
     QComboBox *comboBox_com;
     QPushButton *pushButton_refresh;
     QSpacerItem *espaceDroit;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label;
+    QLineEdit *lineEdit_address_socket;
+    QPushButton *pushButton_connection_socket;
+    QSpacerItem *horizontalSpacer;
     QWidget *ZoneBouton;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *espaceGauche_2;
@@ -110,6 +117,34 @@ public:
 
         verticalLayout_2->addWidget(ZoneComboBox);
 
+        widget = new QWidget(ApplicationGlobale);
+        widget->setObjectName(QStringLiteral("widget"));
+        horizontalLayout_4 = new QHBoxLayout(widget);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        label = new QLabel(widget);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout_4->addWidget(label);
+
+        lineEdit_address_socket = new QLineEdit(widget);
+        lineEdit_address_socket->setObjectName(QStringLiteral("lineEdit_address_socket"));
+
+        horizontalLayout_4->addWidget(lineEdit_address_socket);
+
+        pushButton_connection_socket = new QPushButton(widget);
+        pushButton_connection_socket->setObjectName(QStringLiteral("pushButton_connection_socket"));
+
+        horizontalLayout_4->addWidget(pushButton_connection_socket);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer);
+
+
+        verticalLayout_2->addWidget(widget);
+
         ZoneBouton = new QWidget(ApplicationGlobale);
         ZoneBouton->setObjectName(QStringLiteral("ZoneBouton"));
         horizontalLayout_3 = new QHBoxLayout(ZoneBouton);
@@ -142,14 +177,16 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", Q_NULLPTR));
         comboBox_com->clear();
         comboBox_com->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "S\303\251l\303\251ctionner une carte arduino", 0)
+         << QApplication::translate("MainWindow", "S\303\251l\303\251ctionner une carte arduino", Q_NULLPTR)
         );
-        pushButton_refresh->setText(QApplication::translate("MainWindow", "Rafra\303\256chir", 0));
-        button_start->setText(QApplication::translate("MainWindow", "Valider", 0));
+        pushButton_refresh->setText(QApplication::translate("MainWindow", "Rafra\303\256chir", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow", "Entrez l'adresse du server :", Q_NULLPTR));
+        pushButton_connection_socket->setText(QApplication::translate("MainWindow", "Connection", Q_NULLPTR));
+        button_start->setText(QApplication::translate("MainWindow", "Valider", Q_NULLPTR));
     } // retranslateUi
 
 };

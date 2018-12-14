@@ -4,10 +4,11 @@
 #include <QSerialPortInfo>
 #include <windowquestion.h>
 #include <iostream>
+#include <client.h>
 
 using namespace std;
 
-WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial) :
+WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial, Client *client) :
     QWidget(parent),
     wc(new Ui::ApplicationMode)
 {
@@ -15,6 +16,7 @@ WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial) :
     wc->setupUi(this);
     m_parent = parent;
     init_widget_question();
+    m_client = client;
 }
 
 WindowChoice::~WindowChoice()
@@ -28,7 +30,7 @@ void WindowChoice::init_widget_question(){
 }
 
 void WindowChoice::link_widget_question(QString type_question){
-    WindowQuestion *question = new WindowQuestion(m_parent, m_serial, type_question);
+    WindowQuestion *question = new WindowQuestion(m_parent, m_serial, type_question, m_client);
     question->show();
 }
 

@@ -17,6 +17,7 @@
 #include <QtWidgets/QWidget>
 #include <QLabel>
 #include <QMessageBox>
+#include <client.h>
 
 using namespace std;
 
@@ -50,12 +51,14 @@ private:
     QWidget *m_parent;
     QString m_message_error;
     QMessageBox m_box;
+    Client *m_client;
 
 private slots:
     void CheckButton();
     void sendData(const QByteArray &data);
     void readData();
     void refresh();
+    void connection_server_socket();
 };
 
 #endif // MAINWINDOW_H

@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QByteArray>
 #include <question.h>
+#include <client.h>
 
 namespace Ui{
     class ApplicationQuestion;
@@ -22,7 +23,7 @@ class WindowQuestion : public QWidget
     Q_OBJECT
 
 public:
-    WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_question);
+    WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_question, Client *client);
     ~WindowQuestion();
 
 private:
@@ -43,6 +44,7 @@ private:
     int question_number;
     int error;
     bool isMusicType;
+    Client *m_client;
 
 
 private:

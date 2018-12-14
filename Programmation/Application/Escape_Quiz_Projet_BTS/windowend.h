@@ -17,7 +17,7 @@ class WindowEnd : public QWidget
     Q_OBJECT
 
 public:
-    WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all);
+    WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all, Client *client);
     ~WindowEnd();
 
 private:
@@ -27,6 +27,9 @@ private:
     QWidget *m_parent;
     QSerialPort *m_serial;
     QMessageBox m_message_box;
+    QTcpSocket *m_tcpSocket;
+    quint16 m_blockSize;
+    QNetworkSession *m_networkSession;
     Client *m_client;
 
 private:
@@ -34,7 +37,7 @@ private:
     void show_windowchoice();
     void init_button();
     void display_message_box();
-    void send_socket();
+    void send_socket(const std::string& s);
 
 private slots:
     void event_button();

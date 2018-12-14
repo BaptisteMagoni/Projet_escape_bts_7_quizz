@@ -19,7 +19,7 @@
 
 using namespace std;
 
-WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_button) :
+WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_button, Client *client) :
     QWidget(parent),
     wq(new Ui::ApplicationQuestion)
 {
@@ -39,11 +39,13 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     m_list_button.push_back(wq->pushButton_answer1);
     m_list_button.push_back(wq->pushButton_answer2);
     m_list_button.push_back(wq->pushButton_answer3);
+    m_list_button.push_back(wq->pushButton_rejouer);
     connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
     init_button_event();
     open_file();
     change_page();
     read_one_question();
+    m_client = client;
 
 }
 
@@ -140,7 +142,7 @@ void WindowQuestion::read_data(){
     for(unsigned int i=0;i<m_data_rx.size();i++)
         data_all += m_data_rx.at(i);
     if(isMusicType){
-        if(data_all == "Finish")
+        if(data_all == "25")
             set_state_button(true);
         else
             set_state_button(false);
@@ -170,7 +172,7 @@ void WindowQuestion::change_page(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
-        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, m_answer_player, int_to_str(get_nb_question()));
+        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, m_answer_player, int_to_str(get_nb_question()), m_client);
         endwindow->show();
     }
 }

@@ -6,6 +6,7 @@
 #include <QSerialPortInfo>
 #include <QWidget>
 #include <QMessageBox>
+#include <client.h>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setObject();
     setComPort();
+    ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
 }
 
 MainWindow::~MainWindow()
@@ -40,6 +42,7 @@ void MainWindow::setComPort(){
 void MainWindow::setObject(){
     connect(ui->button_start, SIGNAL (released()), this, SLOT(CheckButton()));
     connect(ui->pushButton_refresh, SIGNAL (released()), this, SLOT(refresh()));
+    connect(ui->pushButton_connection_socket, SIGNAL (released()), this, SLOT(connection_server_socket()));
 }
 
 void MainWindow::refresh(){
@@ -49,14 +52,19 @@ void MainWindow::refresh(){
 }
 
 void MainWindow::CheckButton(){
-    cout << ui->comboBox_com->currentText().toStdString() << endl;
-    QString textCurrent = ui->comboBox_com->currentText();
-    QStringList listContent = textCurrent.split(":");
-    QString comPort = listContent.at(0);
-    comPort = comPort.replace(" ", "");
-    foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-        if(info.portName().compare(comPort) == 0)
-            openPort(comPort, QSerialPort::Baud9600);
+    if(ui->lineEdit_address_socket->text().compare("") != 0){
+        cout << ui->comboBox_com->currentText().toStdString() << endl;
+        QString textCurrent = ui->comboBox_com->currentText();
+        QStringList listContent = textCurrent.split(":");
+        QString comPort = listContent.at(0);
+        comPort = comPort.replace(" ", "");
+        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+            if(info.portName().compare(comPort) == 0)
+                openPort(comPort, QSerialPort::Baud9600);
+    }else{
+        m_message_error = "Il faut rentrer une addresse !";
+        display_message_box();
+    }
 }
 
 void MainWindow::openPort(QString portName, QSerialPort::BaudRate actualBaudRate)
@@ -110,6 +118,19 @@ void MainWindow::show_item_config(){
 }
 
 void MainWindow::init_item_choice(){
-    WindowChoice *choice = new WindowChoice(this, m_serial);
+    WindowChoice *choice = new WindowChoice(this, m_serial, m_client);
     choice->show();
+}
+
+void MainWindow::connection_server_socket(){
+    if(ui->lineEdit_address_socket->text().compare("") == 0){
+        m_message_error = "Il faut rentrer une addresse !";
+        display_message_box();
+    }else{
+        m_client = new Client(ui->lineEdit_address_socket->text());
+       if(m_client->getStateConnection())
+           ui->pushButton_connection_socket->setStyleSheet("background-color: green;");
+       else
+           ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
+    }
 }
