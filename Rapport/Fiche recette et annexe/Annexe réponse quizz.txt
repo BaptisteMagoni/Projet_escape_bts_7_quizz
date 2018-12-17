@@ -1,0 +1,84 @@
+Réponse du Questionnaire musicale:
+
+-Dans quelle Mario provient la musique ?
+mauvaise réponse : Mario galaxy, Mario 64
+Bonne réponse : Mario bros 3
+
+-De quelle film est issue cette musique ?
+mauvaise réponse : Star Trek, Battelstar Galactica
+Bonne réponse : Star wars
+
+-A quelle fête apartient cette chanson ?
+mauvaise réponse : thanksgiving, pâque
+Bonne réponse : Noël
+
+-De quelle film disney s'agit-il ?
+mauvaise réponse : indestructible 2, le roi lion
+Bonne réponse : la reine des neiges
+
+-Quel est le titre de cette chanson ?
+mauvaise réponse: sur le pont d'Avignon, au claire de la lune
+Bonne réponse: a la claire fontaine
+
+-Dans quelle film peut-on entendre cette chanson ?
+mauvaise réponse: prince of persia, avenger
+Bonne réponse: Pirate des caraïbes
+
+Dans combien de harry potter entend-on ce thème ?
+mauvaise réponse: 1, 8
+Bonne réponse : 3
+
+-Quelle est le nom de cette chanson ?
+mauvaise réponse: despacito, la macarena
+Bonne réponse: la cucaracha
+
+-D'ou vient ce son ?
+mauvaise réponse: intro de zelda, générique de zelda
+Bonne réponse: ouverture des coffres
+
+-Quelle est cette série télé ?
+mauvaise réponse: american dad, family guy
+Bonne réponse: Les simpsons
+
+
+
+
+
+
+Réponse du Questionnaire informatique:
+
+-Comment s'appelle le créateur de linux?
+mauvaise réponse: Donald Trump, Bill gates
+Bonne réponse: Linus Torvalds
+
+-Quelle est parmi ces trois réponses, le langage de programmation?
+mauvaise réponse: CSS, HTML
+Bonne réponse: JAVA
+
+-Linux est ..
+mauvaise réponse: un système d'exploitation, un noyau appartenant à apple
+Bonne réponse: un noyau de GNU
+
+-Qu'est ce qu'un OS ?
+mauvaise réponse: Une distribution linux, Une distribution Windows
+Bonne réponse: Un système d'exploitation
+
+-Parmi ces propositions laquelle n'est pas un système d'exploitation?
+mauvaise réponse: GNU, Windows
+Bonne réponse: Linux
+
+-Quel composant est apparue en 1959 ?
+mauvaise réponse: Le microprocesseur, Le processeur
+Bonne réponse: Le circuit intégrer
+
+-Quel est l'origine du mot bug ?
+mauvaise réponse: Je sais pas, je sais pas
+Bonne réponse:
+
+-Que donne la commande ls -rtl
+mauvaise réponse:
+Bonne réponse:
+
+-Que veux dire IP (en anglais) ?
+mauvaise réponse: IT Protocol, IP Protocol
+Bonne réponse: Internet Protocol
