@@ -17,37 +17,73 @@ send_data :1
 QuestionEnd
 
 QuestionStart_3
-Question : A quelle jeu cette musique vous fais penser ?
-Answer 1 : Tetris
-Answer 2 : Worms
-Answer 3 : Ape Escape
+Question : A quelle fête apartient cette chanson ?
+Answer 1 : Noel
+Answer 2 : thanksgiving
+Answer 3 : paque
 answer: 1
 send_data :3
 QuestionEnd
 
 QuestionStart_4
-Question : De quelle legende d'internet provient cette musique ?
-Answer 1 : Piano cat
-Answer 2 : SuperCat
-Answer 3 : NyanCat
+Question : De quelle film disney s'agit-il ?
+Answer 1 : le roi lion
+Answer 2 : indestructible 2
+Answer 3 : la reine des neiges
 answer: 3
 send_data :4
 QuestionEnd
 
 #QuestionStart_5
-#Question :
-#Answer 1 : 
-#Answer 2 :
-#Answer 3 :
-#answer:
+#Question : Quel est le titre de cette chanson ?
+#Answer 1 : sur le pont d'Avignon
+#Answer 2 : au claire de la lune
+#Answer 3 : a la claire fontaine
+#answer: 3
 #send_data :5
 #QuestionEnd
 
 #QuestionStart_6
-#Question :
-#Answer 1 : 
-#Answer 2 :
-#Answer 3 :
-#answer:
+#Question : Dans quelle film peut-on entendre cette chanson ?
+#Answer 1 : Pirate des caraïbes
+#Answer 2 : avenger
+#Answer 3 : prince of persia
+#answer: 1
 #send_data :6
+#QuestionEnd
+
+#QuestionStart_7
+#Question : Dans combien de harry potter entend-on ce thème ?
+#Answer 1 : 8
+#Answer 2 : 1
+#Answer 3 : 3
+#answer: 3
+#send_data :7
+#QuestionEnd
+
+#QuestionStart_8
+#Question : Quelle est le nom de cette chanson ?
+#Answer 1 : despacito
+#Answer 2 : la cucaracha
+#Answer 3 : la macarena
+#answer: 2
+#send_data :8
+#QuestionEnd
+
+#QuestionStart_9
+#Question : D'où vient ce son ?
+#Answer 1 : intro de zelda
+#Answer 2 : générique de zelda
+#Answer 3 : ouverture des coffres
+#answer: 3
+#send_data :9
+#QuestionEnd
+
+#QuestionStart_10
+#Question : Quelle est cette série télé ?
+#Answer 1 : Les simpsons
+#Answer 2 : american dad
+#Answer 3 : family guy
+#answer: 1
+#send_data :10
 #QuestionEnd

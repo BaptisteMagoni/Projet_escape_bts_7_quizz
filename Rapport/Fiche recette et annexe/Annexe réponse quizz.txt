@@ -32,7 +32,7 @@ Bonne réponse : 3
 mauvaise réponse: despacito, la macarena
 Bonne réponse: la cucaracha
 
--D'ou vient ce son ?
+-d'ou vient ce son ?
 mauvaise réponse: intro de zelda, générique de zelda
 Bonne réponse: ouverture des coffres
 
