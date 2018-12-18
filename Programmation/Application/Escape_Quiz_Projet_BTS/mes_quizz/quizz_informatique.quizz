@@ -7,7 +7,7 @@ answer: 2
 QuestionEnd
 
 QuestionStart_2
-Question :Quelle est parmi ces trois réponses, le langage de programmation?
+Question :Quelle est parmi ces trois \n réponses, le langage de programmation?
 Answer 1:CSS
 Answer 2:Java
 Answer 3:HTML
@@ -31,7 +31,7 @@ answer: 1
 QuestionEnd
 
 QuestionStart_5
-Question :Parmi ces propositions laquelle n'est pas un système d'exploitation?
+Question :Laquelle n'est pas un système d'exploitation?
 Answer 1:GNU
 Answer 2:Windows
 Answer 3:Linux

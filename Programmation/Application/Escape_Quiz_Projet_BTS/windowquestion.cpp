@@ -142,7 +142,7 @@ void WindowQuestion::read_data(){
     for(unsigned int i=0;i<m_data_rx.size();i++)
         data_all += m_data_rx.at(i);
     if(isMusicType){
-        if(data_all == "25")
+        if(data_all == "2")
             set_state_button(true);
         else
             set_state_button(false);

@@ -34,56 +34,56 @@ answer: 3
 send_data :4
 QuestionEnd
 
-#QuestionStart_5
-#Question : Quel est le titre de cette chanson ?
-#Answer 1 : sur le pont d'Avignon
-#Answer 2 : au claire de la lune
-#Answer 3 : a la claire fontaine
-#answer: 3
-#send_data :5
-#QuestionEnd
+QuestionStart_5
+Question : Quel est le titre de cette chanson ?
+Answer 1 : sur le pont d'Avignon
+Answer 2 : au claire de la lune
+Answer 3 : a la claire fontaine
+answer: 3
+send_data :5
+QuestionEnd
 
-#QuestionStart_6
-#Question : Dans quelle film peut-on entendre cette chanson ?
-#Answer 1 : Pirate des caraïbes
-#Answer 2 : avenger
-#Answer 3 : prince of persia
-#answer: 1
-#send_data :6
-#QuestionEnd
+QuestionStart_6
+Question : Dans quelle film peut-on entendre cette chanson ?
+Answer 1 : Pirate des caraïbes
+Answer 2 : avenger
+Answer 3 : prince of persia
+answer: 1
+send_data :6
+QuestionEnd
 
-#QuestionStart_7
-#Question : Dans combien de harry potter entend-on ce thème ?
-#Answer 1 : 8
-#Answer 2 : 1
-#Answer 3 : 3
-#answer: 3
-#send_data :7
-#QuestionEnd
+QuestionStart_7
+Question : Dans combien de harry potter entend-on ce thème ?
+Answer 1 : 8
+Answer 2 : 1
+Answer 3 : 3
+answer: 3
+send_data :7
+QuestionEnd
 
-#QuestionStart_8
-#Question : Quelle est le nom de cette chanson ?
-#Answer 1 : despacito
-#Answer 2 : la cucaracha
-#Answer 3 : la macarena
-#answer: 2
-#send_data :8
-#QuestionEnd
+QuestionStart_8
+Question : Quelle est le nom de cette chanson ?
+Answer 1 : despacito
+Answer 2 : la cucaracha
+Answer 3 : la macarena
+answer: 2
+send_data :8
+QuestionEnd
 
-#QuestionStart_9
-#Question : D'où vient ce son ?
-#Answer 1 : intro de zelda
-#Answer 2 : générique de zelda
-#Answer 3 : ouverture des coffres
-#answer: 3
-#send_data :9
-#QuestionEnd
+QuestionStart_9
+Question : D'où vient ce son ?
+Answer 1 : intro de zelda
+Answer 2 : générique de zelda
+Answer 3 : ouverture des coffres
+answer: 3
+send_data :9
+QuestionEnd
 
-#QuestionStart_10
-#Question : Quelle est cette série télé ?
-#Answer 1 : Les simpsons
-#Answer 2 : american dad
-#Answer 3 : family guy
-#answer: 1
-#send_data :10
-#QuestionEnd
+QuestionStart_10
+Question : Quelle est cette série télé ?
+Answer 1 : Les simpsons
+Answer 2 : american dad
+Answer 3 : family guy
+answer: 1
+send_data :10
+QuestionEnd
