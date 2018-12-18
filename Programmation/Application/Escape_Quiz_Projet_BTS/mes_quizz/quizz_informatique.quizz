@@ -49,16 +49,16 @@ QuestionEnd
 QuestionStart_7
 Question :Quel est l'origine du mot bug ?
 Answer 1:Un insect qui à provoqué un faux contact
-Answer 2:Je sais pas
-Answer 3:Je sais pas
+Answer 2:Une fille qui a eu peur du premier ordinateur
+Answer 3:je sais pas
 Answer: 1
 QuestionEnd
 
 QuestionStart_8
-Question :Que donne la commande ls -rtl
-Answer 1:Je sais pas
-Answer 2:Je sais pas
-Answer 3:Je sais ap
+Question :Que donne la commande ls -rep
+Answer 1: linux
+Answer 2: "repose en paix"
+Answer 3: Liste du répertoire rep
 Answer: 3
 QuestionEnd
 
