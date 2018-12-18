@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowchoice.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -52,6 +52,7 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         widget_2 = new QWidget(ApplicationMode);
         widget_2->setObjectName(QStringLiteral("widget_2"));
+        widget_2->setStyleSheet(QStringLiteral("background-color: rgb(203, 203, 152);"));
         horizontalLayout_2 = new QHBoxLayout(widget_2);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -163,10 +164,10 @@ public:
 
     void retranslateUi(QWidget *ApplicationMode)
     {
-        ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", 0));
-        pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
-        pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
-        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", 0));
+        ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", Q_NULLPTR));
+        pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", Q_NULLPTR));
+        pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", Q_NULLPTR));
+        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", Q_NULLPTR));
     } // retranslateUi
 
 };
