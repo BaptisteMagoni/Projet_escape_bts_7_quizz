@@ -75,9 +75,9 @@ Bonne réponse: Le circuit intégrer
 mauvaise réponse: Je sais pas, je sais pas
 Bonne réponse:
 
--Que donne la commande ls -rtl
-mauvaise réponse:
-Bonne réponse:
+-Que donne la commande ls -rep
+mauvaise réponse: linux, "repose en paix"
+Bonne réponse: Liste du répertoire rep
 
 -Que veux dire IP (en anglais) ?
 mauvaise réponse: IT Protocol, IP Protocol
