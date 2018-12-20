@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -32,7 +31,6 @@ class Ui_MainWindow
 public:
     QWidget *ApplicationGlobale;
     QVBoxLayout *verticalLayout_2;
-    QCheckBox *checkBox_demo;
     QWidget *ZoneLabel;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *espaceGauche_3;
@@ -48,10 +46,8 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label;
     QLineEdit *lineEdit_address_socket;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_2;
-    QLineEdit *lineEdit_port;
     QPushButton *pushButton_connection_socket;
+    QSpacerItem *horizontalSpacer;
     QWidget *ZoneBouton;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *espaceGauche_2;
@@ -69,11 +65,6 @@ public:
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        checkBox_demo = new QCheckBox(ApplicationGlobale);
-        checkBox_demo->setObjectName(QStringLiteral("checkBox_demo"));
-
-        verticalLayout_2->addWidget(checkBox_demo);
-
         ZoneLabel = new QWidget(ApplicationGlobale);
         ZoneLabel->setObjectName(QStringLiteral("ZoneLabel"));
         horizontalLayout = new QHBoxLayout(ZoneLabel);
@@ -142,27 +133,14 @@ public:
 
         horizontalLayout_4->addWidget(lineEdit_address_socket);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer);
-
-        label_2 = new QLabel(widget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        horizontalLayout_4->addWidget(label_2);
-
-        lineEdit_port = new QLineEdit(widget);
-        lineEdit_port->setObjectName(QStringLiteral("lineEdit_port"));
-        lineEdit_port->setMinimumSize(QSize(0, 0));
-        lineEdit_port->setMaximumSize(QSize(100, 16777215));
-        lineEdit_port->setBaseSize(QSize(0, 0));
-
-        horizontalLayout_4->addWidget(lineEdit_port);
-
         pushButton_connection_socket = new QPushButton(widget);
         pushButton_connection_socket->setObjectName(QStringLiteral("pushButton_connection_socket"));
 
         horizontalLayout_4->addWidget(pushButton_connection_socket);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer);
 
 
         verticalLayout_2->addWidget(widget);
@@ -200,7 +178,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        checkBox_demo->setText(QApplication::translate("MainWindow", "D\303\251mo", 0));
         label_bienvenue->setText(QApplication::translate("MainWindow", "Bienvenue sur l'application QUIZZ", 0));
         comboBox_com->clear();
         comboBox_com->insertItems(0, QStringList()
@@ -208,7 +185,6 @@ public:
         );
         pushButton_refresh->setText(QApplication::translate("MainWindow", "Rafra\303\256chir", 0));
         label->setText(QApplication::translate("MainWindow", "Entrez l'adresse du server :", 0));
-        label_2->setText(QApplication::translate("MainWindow", "Port :", 0));
         pushButton_connection_socket->setText(QApplication::translate("MainWindow", "Connection", 0));
         button_start->setText(QApplication::translate("MainWindow", "Valider", 0));
     } // retranslateUi

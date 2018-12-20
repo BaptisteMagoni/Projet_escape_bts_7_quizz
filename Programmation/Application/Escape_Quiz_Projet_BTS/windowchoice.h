@@ -17,7 +17,7 @@ class WindowChoice : public QWidget
     Q_OBJECT
 
 public:
-    WindowChoice(QWidget *parent, QSerialPort *serial, Client *client);
+    WindowChoice(QWidget *parent, QSerialPort *serial, Client *client, bool demo);
     ~WindowChoice();
 
 private:
@@ -25,6 +25,7 @@ private:
     QSerialPort *m_serial;
     QWidget *m_parent;
     Client * m_client;
+    bool m_demo;
 
 private:
     void init_widget_question();

@@ -23,7 +23,7 @@ class WindowQuestion : public QWidget
     Q_OBJECT
 
 public:
-    WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_question, Client *client);
+    WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_question, Client *client, bool demo);
     ~WindowQuestion();
 
 private:
@@ -45,6 +45,7 @@ private:
     int error;
     bool isMusicType;
     Client *m_client;
+    bool m_demo;
 
 
 private:

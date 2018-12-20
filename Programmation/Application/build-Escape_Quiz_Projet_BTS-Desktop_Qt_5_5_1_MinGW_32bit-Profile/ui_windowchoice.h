@@ -15,7 +15,6 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -42,7 +41,6 @@ public:
     QSpacerItem *horizontalSpacer_5;
     QPushButton *pushButton_mixte;
     QSpacerItem *horizontalSpacer_6;
-    QLabel *label_mode;
 
     void setupUi(QWidget *ApplicationMode)
     {
@@ -158,13 +156,6 @@ public:
 
         verticalLayout->addWidget(widget);
 
-        label_mode = new QLabel(ApplicationMode);
-        label_mode->setObjectName(QStringLiteral("label_mode"));
-        label_mode->setStyleSheet(QLatin1String("text-align: center;\n"
-""));
-
-        verticalLayout->addWidget(label_mode);
-
 
         retranslateUi(ApplicationMode);
 
@@ -177,7 +168,6 @@ public:
         pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
         pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
         pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", 0));
-        label_mode->setText(QApplication::translate("ApplicationMode", "Mode d\303\251mo", 0));
     } // retranslateUi
 
 };

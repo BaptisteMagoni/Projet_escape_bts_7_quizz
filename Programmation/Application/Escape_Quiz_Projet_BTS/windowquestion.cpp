@@ -19,7 +19,7 @@
 
 using namespace std;
 
-WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_button, Client *client) :
+WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString type_button, Client *client, bool demo) :
     QWidget(parent),
     wq(new Ui::ApplicationQuestion)
 {
@@ -36,6 +36,8 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
         isMusicType = false;
         wq->widget_rejouer->hide();
     }
+    if(!m_demo)
+       isMusicType = false;
     m_list_button.push_back(wq->pushButton_answer1);
     m_list_button.push_back(wq->pushButton_answer2);
     m_list_button.push_back(wq->pushButton_answer3);
@@ -45,8 +47,8 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     open_file();
     change_page();
     read_one_question();
-    m_client = client;
-
+    m_client = client;;
+    m_demo = demo;
 }
 
 WindowQuestion::~WindowQuestion()
@@ -140,7 +142,9 @@ void WindowQuestion::read_data(){
     m_data_rx.push_back(data);
     QString data_all = "";
     for(unsigned int i=0;i<m_data_rx.size();i++)
-        data_all += m_data_rx.at(i);
+        if(m_data_rx.at(i).compare("") == 0)
+            data_all += m_data_rx.at(i);
+    cout << "Data all : " << data_all << endl;
     if(isMusicType){
         if(data_all == "2")
             set_state_button(true);
@@ -172,7 +176,7 @@ void WindowQuestion::change_page(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
-        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, m_answer_player, int_to_str(get_nb_question()), m_client);
+        WindowEnd *endwindow = new WindowEnd(m_parent, m_serial, m_answer_player, int_to_str(get_nb_question()), m_client, m_demo);
         endwindow->show();
     }
 }
@@ -203,7 +207,6 @@ void WindowQuestion::check_answer(QString answerplayer){
     }
     if(m_error.size() == 3) {
         reset();
-        change_page();
         display_message_error();
         read_one_question();
     }else

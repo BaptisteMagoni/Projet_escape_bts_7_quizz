@@ -387,6 +387,17 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
      </layout>
     </widget>
    </item>
+   <item>
+    <widget class="QLabel" name="label_mode">
+     <property name="styleSheet">
+      <string notr="true">text-align: center;
+</string>
+     </property>
+     <property name="text">
+      <string>Mode démo</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

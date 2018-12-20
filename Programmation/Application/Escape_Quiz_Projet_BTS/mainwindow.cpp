@@ -118,7 +118,7 @@ void MainWindow::show_item_config(){
 }
 
 void MainWindow::init_item_choice(){
-    WindowChoice *choice = new WindowChoice(this, m_serial, m_client);
+    WindowChoice *choice = new WindowChoice(this, m_serial, m_client, ui->checkBox_demo->checkState());
     choice->show();
 }
 

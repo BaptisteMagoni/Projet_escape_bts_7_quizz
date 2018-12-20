@@ -16,6 +16,13 @@
   <widget class="QWidget" name="ApplicationGlobale">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
+     <widget class="QCheckBox" name="checkBox_demo">
+      <property name="text">
+       <string>Démo</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QWidget" name="ZoneLabel" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -134,13 +141,6 @@
         <widget class="QLineEdit" name="lineEdit_address_socket"/>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_connection_socket">
-         <property name="text">
-          <string>Connection</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -152,6 +152,42 @@
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Port :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_port">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_connection_socket">
+         <property name="text">
+          <string>Connection</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial, Client *client) :
+WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial, Client *client, bool demo) :
     QWidget(parent),
     wc(new Ui::ApplicationMode)
 {
@@ -17,6 +17,11 @@ WindowChoice::WindowChoice(QWidget *parent, QSerialPort *serial, Client *client)
     m_parent = parent;
     init_widget_question();
     m_client = client;
+    m_demo = demo;
+    if(!m_demo)
+        wc->label_mode->hide();
+    else
+        wc->label_mode->show();
 }
 
 WindowChoice::~WindowChoice()
@@ -30,7 +35,7 @@ void WindowChoice::init_widget_question(){
 }
 
 void WindowChoice::link_widget_question(QString type_question){
-    WindowQuestion *question = new WindowQuestion(m_parent, m_serial, type_question, m_client);
+    WindowQuestion *question = new WindowQuestion(m_parent, m_serial, type_question, m_client, m_demo);
     question->show();
 }
 

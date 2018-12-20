@@ -17,7 +17,7 @@ class WindowEnd : public QWidget
     Q_OBJECT
 
 public:
-    WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all, Client *client);
+    WindowEnd(QWidget *parent, QSerialPort *serial, std::vector<bool> score, QString answer_number_all, Client *client, bool demo);
     ~WindowEnd();
 
 private:
@@ -31,6 +31,7 @@ private:
     quint16 m_blockSize;
     QNetworkSession *m_networkSession;
     Client *m_client;
+    bool m_demo;
 
 private:
     int count_score();
