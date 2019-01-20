@@ -16,9 +16,9 @@ QuestionEnd
 
 QuestionStart_3
 Question :Linux est ..
-Answer 1:un noyau de GNU ?
-Answer 2:un noyau appartenant à apple?
-Answer 3:un système d'exploitation ?
+Answer 1:Un noyau de GNU ?
+Answer 2:Un noyau appartenant à apple?
+Answer 3:Un système d'exploitation ?
 answer: 1
 QuestionEnd
 
@@ -56,7 +56,7 @@ QuestionEnd
 
 QuestionStart_8
 Question :Que donne la commande ls -rep
-Answer 1: linux
+Answer 1: Linux
 Answer 2: "repose en paix"
 Answer 3: Liste du répertoire rep
 Answer: 3

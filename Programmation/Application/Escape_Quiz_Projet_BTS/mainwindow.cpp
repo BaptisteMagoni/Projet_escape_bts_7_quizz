@@ -127,7 +127,7 @@ void MainWindow::connection_server_socket(){
         m_message_error = "Il faut rentrer une addresse !";
         display_message_box();
     }else{
-       m_client = new Client(ui->lineEdit_address_socket->text());
+       m_client = new Client(ui->lineEdit_address_socket->text(), ui->lineEdit_port->text().toInt());
        if(m_client->getStateConnection())
            ui->pushButton_connection_socket->setStyleSheet("background-color: green;");
        else{

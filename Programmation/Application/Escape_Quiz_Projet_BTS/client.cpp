@@ -13,11 +13,11 @@ Client::Client() :
     connection_socket();
 }
 
-Client::Client(QString addr){
-    connection_socket(addr);
+Client::Client(QString addr, int port){
+    connection_socket(addr, port);
 }
 
-void Client::connection_socket(QString addr){
+void Client::connection_socket(QString addr, int port){
     m_state_connection = false;
     std::cout << "Application Client" << std::endl;
     m_tcpSocket = new QTcpSocket(this);
@@ -33,7 +33,7 @@ void Client::connection_socket(QString addr){
     if(addr == NULL)
         m_tcpSocket->connectToHost( QHostAddress("10.16.3.214").toString(),53000);
     else
-        m_tcpSocket->connectToHost( QHostAddress(addr).toString(),53000);
+        m_tcpSocket->connectToHost( QHostAddress(addr).toString(), port);
     m_state_connection = m_tcpSocket->state();
 
 }
