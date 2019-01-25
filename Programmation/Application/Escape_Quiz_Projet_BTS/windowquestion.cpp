@@ -42,7 +42,8 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     m_list_button.push_back(wq->pushButton_answer2);
     m_list_button.push_back(wq->pushButton_answer3);
     m_list_button.push_back(wq->pushButton_rejouer);
-    connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
+    if(isMusicType)
+        connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
     init_button_event();
     open_file();
     change_question();

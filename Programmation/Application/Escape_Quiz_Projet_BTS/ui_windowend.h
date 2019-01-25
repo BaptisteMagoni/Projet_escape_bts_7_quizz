@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowend.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -156,10 +156,10 @@ public:
 
     void retranslateUi(QWidget *ApplicationEnd)
     {
-        ApplicationEnd->setWindowTitle(QApplication::translate("ApplicationEnd", "Form", 0));
+        ApplicationEnd->setWindowTitle(QApplication::translate("ApplicationEnd", "Form", Q_NULLPTR));
         label->setText(QString());
-        label_score->setText(QApplication::translate("ApplicationEnd", "Score", 0));
-        pushButton_finish->setText(QApplication::translate("ApplicationEnd", "J'ai fini", 0));
+        label_score->setText(QApplication::translate("ApplicationEnd", "Score", Q_NULLPTR));
+        pushButton_finish->setText(QApplication::translate("ApplicationEnd", "J'ai fini", Q_NULLPTR));
     } // retranslateUi
 
 };

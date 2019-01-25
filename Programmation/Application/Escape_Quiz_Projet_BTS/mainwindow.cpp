@@ -128,12 +128,12 @@ void MainWindow::connection_server_socket(){
         display_message_box();
     }else{
        m_client = new Client(ui->lineEdit_address_socket->text(), ui->lineEdit_port->text().toInt());
-       if(m_client->getStateConnection())
+       /*if(m_client->getStateConnection())
            ui->pushButton_connection_socket->setStyleSheet("background-color: green;");
        else{
            ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
            m_message_error = "Vérifier si le proxy de votre ordinateur est désactivé";
            display_message_box();
-       }
+       }*/
     }
 }

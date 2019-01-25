@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowchoice.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -173,11 +173,11 @@ public:
 
     void retranslateUi(QWidget *ApplicationMode)
     {
-        ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", 0));
-        pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", 0));
-        pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", 0));
-        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", 0));
-        label_mode->setText(QApplication::translate("ApplicationMode", "Mode d\303\251mo", 0));
+        ApplicationMode->setWindowTitle(QApplication::translate("ApplicationMode", "Form", Q_NULLPTR));
+        pushButton_musical->setText(QApplication::translate("ApplicationMode", "Quizz Musical", Q_NULLPTR));
+        pushButton_informatique->setText(QApplication::translate("ApplicationMode", "Quizz Informatique", Q_NULLPTR));
+        pushButton_mixte->setText(QApplication::translate("ApplicationMode", "Quizz al\303\251atoire", Q_NULLPTR));
+        label_mode->setText(QApplication::translate("ApplicationMode", "Mode d\303\251mo", Q_NULLPTR));
     } // retranslateUi
 
 };

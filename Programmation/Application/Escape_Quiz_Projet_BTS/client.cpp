@@ -32,9 +32,12 @@ void Client::connection_socket(QString addr, int port){
     m_tcpSocket->abort();
     if(addr == NULL)
         m_tcpSocket->connectToHost( QHostAddress("10.16.3.214").toString(),53000);
-    else
-        m_tcpSocket->connectToHost( QHostAddress(addr).toString(), port);
-    m_state_connection = m_tcpSocket->state();
+    else{
+        m_port = port;
+        m_addr = addr;
+    }
+
+    //m_state_connection = m_tcpSocket->state();
 
 }
 
@@ -60,5 +63,8 @@ bool Client::getStateConnection(){
 }
 
 void Client::finish(){
+    m_tcpSocket->connectToHost( QHostAddress(m_addr).toString(), m_port);
+    m_state_connection = m_tcpSocket->state();
     send_data("GAGNE:7");
+    m_tcpSocket->close();
 }
