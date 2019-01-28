@@ -146,6 +146,7 @@ void MainWindow::connection_server_socket(){
            ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
            m_message_error = "Vérifier si le proxy de votre ordinateur est désactivé";
            display_message_box();
+           client_exists = false;
        }
     }
 }
