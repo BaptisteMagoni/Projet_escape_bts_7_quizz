@@ -35,6 +35,9 @@ void Client::connection_socket(QString addr, int port){
     else{
         m_port = port;
         m_addr = addr;
+        connection();
+        if(m_state_connection)
+            m_tcpSocket->close();
     }
 
     //m_state_connection = m_tcpSocket->state();
@@ -62,9 +65,13 @@ bool Client::getStateConnection(){
     return m_state_connection;
 }
 
-void Client::finish(){
+void Client::connection(){
     m_tcpSocket->connectToHost( QHostAddress(m_addr).toString(), m_port);
     m_state_connection = m_tcpSocket->state();
+}
+
+void Client::finish(){
+    connection();
     send_data("GAGNE:7");
     m_tcpSocket->close();
 }

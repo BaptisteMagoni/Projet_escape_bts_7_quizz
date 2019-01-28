@@ -21,6 +21,7 @@ private:
 private:
     void send_data( const std::string& s);
     void connection_socket(QString addr = NULL, int port = 0);
+    void connection();
 
 };
 

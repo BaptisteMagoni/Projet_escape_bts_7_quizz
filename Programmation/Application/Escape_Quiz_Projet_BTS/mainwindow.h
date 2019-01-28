@@ -52,6 +52,7 @@ private:
     QString m_message_error;
     QMessageBox m_box;
     Client *m_client;
+    bool client_exists;
 
 private slots:
     void CheckButton();
