@@ -42,10 +42,11 @@ WindowQuestion::WindowQuestion(QWidget *parent, QSerialPort *serial, QString typ
     m_list_button.push_back(wq->pushButton_answer2);
     m_list_button.push_back(wq->pushButton_answer3);
     m_list_button.push_back(wq->pushButton_rejouer);
-    connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
+    if(isMusicType)
+        connect(m_serial, SIGNAL(readyRead()), this, SLOT(read_data()));
     init_button_event();
     open_file();
-    change_page();
+    change_question();
     read_one_question();
     m_client = client;;
     m_demo = demo;
@@ -64,7 +65,7 @@ void WindowQuestion::init_button_event(){
 }
 
 void WindowQuestion::open_file(){
-    QString nom_fichier = NULL;
+    QString nom_fichier = "";
     if(m_type_question.compare("aléatoire") != 0)
         nom_fichier = "mes_quizz/quizz_" + m_type_question + ".quizz";
     else{
@@ -118,7 +119,7 @@ void WindowQuestion::read_one_question(){
             display_question(question_list.at(1), answer1.at(1), answer2.at(1), answer3.at(1));
         }
     }
-    change_page();
+    change_question();
 }
 
 void WindowQuestion::set_state_button(bool state){
@@ -138,19 +139,9 @@ void WindowQuestion::set_state_button(bool state){
 
 void WindowQuestion::read_data(){
     QByteArray data = m_serial->readAll();
-    cout << "Data recu : " << data.toStdString() << endl;
-    m_data_rx.push_back(data);
-    QString data_all = "";
-    for(unsigned int i=0;i<m_data_rx.size();i++)
-        if(m_data_rx.at(i).compare("") == 0)
-            data_all += m_data_rx.at(i);
-    cout << "Data all : " << data_all << endl;
+    cout << "Data recu : " << data.toStdString() << " Musique : " << isMusicType << endl;
     if(isMusicType){
-        if(data_all == "2")
-            set_state_button(true);
-        else
-            set_state_button(false);
-        m_data_rx.clear();
+        set_state_button(true);
     }
 
 }
@@ -172,7 +163,7 @@ QString WindowQuestion::int_to_str(int num){
     return QString::number(num);
 }
 
-void WindowQuestion::change_page(){
+void WindowQuestion::change_question(){
     wq->label_page->setText(int_to_str(question_number) + "/" + int_to_str(get_nb_question()));
     if(question_number == get_nb_question()+1){
         this->close();
@@ -208,9 +199,8 @@ void WindowQuestion::check_answer(QString answerplayer){
     if(m_error.size() == 3) {
         reset();
         display_message_error();
-        read_one_question();
     }else
-        question_number = question_number + 1;
+        question_number += 1;
     read_one_question();
 }
 

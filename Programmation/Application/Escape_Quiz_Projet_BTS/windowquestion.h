@@ -51,7 +51,7 @@ private:
 private:
     void read_one_question();
     void open_file();
-    void change_page();
+    void change_question();
     void init_button_event();
     void check_answer(QString answerplayer);
     void display_question(QString question, QString answer1, QString answer2, QString answer3);

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'windowquestion.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -257,14 +257,14 @@ public:
 
     void retranslateUi(QWidget *ApplicationQuestion)
     {
-        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", 0));
-        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", 0));
-        label_question_ligne1->setText(QApplication::translate("ApplicationQuestion", "Question_ligne1", 0));
-        label_question_ligne2->setText(QApplication::translate("ApplicationQuestion", "Question_ligne2", 0));
-        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
-        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
-        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", 0));
-        pushButton_rejouer->setText(QApplication::translate("ApplicationQuestion", "Rejouer la musique", 0));
+        ApplicationQuestion->setWindowTitle(QApplication::translate("ApplicationQuestion", "Form", Q_NULLPTR));
+        label_page->setText(QApplication::translate("ApplicationQuestion", "{page}/{nb_de_page}", Q_NULLPTR));
+        label_question_ligne1->setText(QApplication::translate("ApplicationQuestion", "Question_ligne1", Q_NULLPTR));
+        label_question_ligne2->setText(QApplication::translate("ApplicationQuestion", "Question_ligne2", Q_NULLPTR));
+        pushButton_answer1->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        pushButton_answer2->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        pushButton_answer3->setText(QApplication::translate("ApplicationQuestion", "PushButton", Q_NULLPTR));
+        pushButton_rejouer->setText(QApplication::translate("ApplicationQuestion", "Rejouer la musique", Q_NULLPTR));
     } // retranslateUi
 
 };

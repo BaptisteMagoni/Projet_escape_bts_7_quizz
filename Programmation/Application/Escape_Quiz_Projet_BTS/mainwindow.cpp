@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setObject();
     setComPort();
     ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
+    client_exists = false;
 }
 
 MainWindow::~MainWindow()
@@ -54,13 +55,23 @@ void MainWindow::refresh(){
 void MainWindow::CheckButton(){
     if(ui->lineEdit_address_socket->text().compare("") != 0){
         cout << ui->comboBox_com->currentText().toStdString() << endl;
-        QString textCurrent = ui->comboBox_com->currentText();
-        QStringList listContent = textCurrent.split(":");
-        QString comPort = listContent.at(0);
-        comPort = comPort.replace(" ", "");
-        foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
-            if(info.portName().compare(comPort) == 0)
-                openPort(comPort, QSerialPort::Baud9600);
+        if(ui->comboBox_com->currentText().toStdString().compare("Séléctionner une carte arduino") != 0){
+            if(client_exists){
+                QString textCurrent = ui->comboBox_com->currentText();
+                QStringList listContent = textCurrent.split(":");
+                QString comPort = listContent.at(0);
+                comPort = comPort.replace(" ", "");
+                foreach (const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+                    if(info.portName().compare(comPort) == 0)
+                        openPort(comPort, QSerialPort::Baud9600);
+           }else{
+               m_message_error = "Vous n'êtes pas connecté au serveur !";
+               display_message_box();
+           }
+        }else{
+                m_message_error = "Ce n'est pas une carte arduino. Ressayer !";
+                display_message_box();
+            }
     }else{
         m_message_error = "Il faut rentrer une addresse !";
         display_message_box();
@@ -127,13 +138,15 @@ void MainWindow::connection_server_socket(){
         m_message_error = "Il faut rentrer une addresse !";
         display_message_box();
     }else{
-       m_client = new Client(ui->lineEdit_address_socket->text());
-       if(m_client->getStateConnection())
+       m_client = new Client(ui->lineEdit_address_socket->text(), ui->lineEdit_port->text().toInt());
+       if(m_client->getStateConnection()){
            ui->pushButton_connection_socket->setStyleSheet("background-color: green;");
-       else{
+           client_exists = true;
+       }else{
            ui->pushButton_connection_socket->setStyleSheet("background-color: red;");
            m_message_error = "Vérifier si le proxy de votre ordinateur est désactivé";
            display_message_box();
+           client_exists = false;
        }
     }
 }

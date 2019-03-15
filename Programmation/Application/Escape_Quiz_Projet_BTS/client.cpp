@@ -13,11 +13,11 @@ Client::Client() :
     connection_socket();
 }
 
-Client::Client(QString addr){
-    connection_socket(addr);
+Client::Client(QString addr, int port){
+    connection_socket(addr, port);
 }
 
-void Client::connection_socket(QString addr){
+void Client::connection_socket(QString addr, int port){
     m_state_connection = false;
     std::cout << "Application Client" << std::endl;
     m_tcpSocket = new QTcpSocket(this);
@@ -32,9 +32,15 @@ void Client::connection_socket(QString addr){
     m_tcpSocket->abort();
     if(addr == NULL)
         m_tcpSocket->connectToHost( QHostAddress("10.16.3.214").toString(),53000);
-    else
-        m_tcpSocket->connectToHost( QHostAddress(addr).toString(),53000);
-    m_state_connection = m_tcpSocket->state();
+    else{
+        m_port = port;
+        m_addr = addr;
+        connection();
+        if(m_state_connection)
+            m_tcpSocket->close();
+    }
+
+    //m_state_connection = m_tcpSocket->state();
 
 }
 
@@ -59,6 +65,13 @@ bool Client::getStateConnection(){
     return m_state_connection;
 }
 
+void Client::connection(){
+    m_tcpSocket->connectToHost( QHostAddress(m_addr).toString(), m_port);
+    m_state_connection = m_tcpSocket->state();
+}
+
 void Client::finish(){
+    connection();
     send_data("GAGNE:7");
+    m_tcpSocket->close();
 }
